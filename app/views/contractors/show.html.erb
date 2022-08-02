@@ -6,7 +6,11 @@
 
     <%= render @contractor %>
     
-    <%= link_to 'Agregar datos de la pensión', pension_path, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Agregar datos de la pensión', new_pension_path, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Agregar datos de la EPS', new_health_path, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Agregar datos de los correos', new_email_path, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Agregar datos de los telefonos', new_phone_path, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Agregar datos de las profesiones de los contratistas', new_contractor_profession_path, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <%= link_to 'Edit this contractor', edit_contractor_path(@contractor), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <div class="inline-block ml-2">
       <%= button_to 'Destroy this contractor', contractor_path(@contractor), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
