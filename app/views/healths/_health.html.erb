@@ -1,0 +1,37 @@
+<div id="<%= dom_id health %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Codigo nit eps:</strong>
+    <%= health.codigo_nit_eps %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Nombre eps:</strong>
+    <%= health.nombre_eps %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Telefono eps:</strong>
+    <%= health.telefono_eps %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Ciudad eps:</strong>
+    <%= health.ciudad_eps %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Correo eps:</strong>
+    <%= health.correo_eps %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Cedula contratista:</strong>
+    <%= health.cedula_contratista %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this health", health, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this health', edit_health_path(health), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
