@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codigo_nit_eps: 1
+  nombre_eps: MyString
+  telefono_eps: 1
+  ciudad_eps: MyString
+  correo_eps: MyString
+  cedula_contratista: 1
+
+two:
+  codigo_nit_eps: 1
+  nombre_eps: MyString
+  telefono_eps: 1
+  ciudad_eps: MyString
+  correo_eps: MyString
+  cedula_contratista: 1

@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cedula_contratista: 1
+  nit_de_la_entidad: 1
+  nombre_la_entidad: MyString
+  telefono_de_la_entidad: MyString
+  ciudad_de_la_entidad: MyString
+  correo_de_la_entidad: MyString
+
+two:
+  cedula_contratista: 1
+  nit_de_la_entidad: 1
+  nombre_la_entidad: MyString
+  telefono_de_la_entidad: MyString
+  ciudad_de_la_entidad: MyString
+  correo_de_la_entidad: MyString

@@ -1,0 +1,37 @@
+<div id="<%= dom_id pension %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Cedula contratista:</strong>
+    <%= pension.cedula_contratista %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Nit de la entidad:</strong>
+    <%= pension.nit_de_la_entidad %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Nombre la entidad:</strong>
+    <%= pension.nombre_la_entidad %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Telefono de la entidad:</strong>
+    <%= pension.telefono_de_la_entidad %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Ciudad de la entidad:</strong>
+    <%= pension.ciudad_de_la_entidad %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Correo de la entidad:</strong>
+    <%= pension.correo_de_la_entidad %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this pension", pension, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this pension', edit_pension_path(pension), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
