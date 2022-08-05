@@ -9,7 +9,12 @@
         <% end %>
       </ul>
     </div>
-  <% end %>
+  <% end %>  
+
+  <div class="my-5">
+    <%= form.label :id_contratista %>
+    <%= form.select :contractor_id, Contractor.ids %>
+  </div>
 
   <div class="my-5">
     <%= form.label :cedula_contratista %>

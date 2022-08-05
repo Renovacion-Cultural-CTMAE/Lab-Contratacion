@@ -11,7 +11,10 @@
     <span class="block px-12 py-3 transition-transform bg-naranja border border-naranja active:border-naranja active:bg-red-500 group-hover:-translate-x-1 group-hover:-translate-y-1">Editar pension
    <% end %>
     <div class="inline-block ml-2">
-      <%= button_to 'Destroy this pension', pension_path(@pension), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+ <%= button_to  pension_path(@pension), method: :delete, class: "relative inline-block text-sm font-medium text-white group focus:outline-none focus:ring" do %>
+           <span class="absolute inset-0 border border-naranja group-active:border-naranja"></span>
+    <span class="block px-12 py-3 transition-transform bg-naranja border border-naranja active:border-naranja active:bg-red-500 group-hover:-translate-x-1 group-hover:-translate-y-1">Eliminar los datos de esta pension
+        <% end %>
     </div>
     <%= link_to pensions_path, class: "relative inline-block text-sm font-medium text-white group focus:outline-none focus:ring" do %>
     <span class="absolute inset-0 border border-naranja group-active:border-naranja"></span>

@@ -65,6 +65,6 @@ class HealthsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def health_params
-      params.require(:health).permit(:codigo_nit_eps, :nombre_eps, :telefono_eps, :ciudad_eps, :correo_eps, :cedula_contratista)
+      params.require(:health).permit(:codigo_nit_eps, :nombre_eps, :telefono_eps, :ciudad_eps, :correo_eps, :cedula_contratista, :contractor_id)
     end
 end

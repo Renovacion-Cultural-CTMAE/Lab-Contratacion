@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="my-5">
+    <%= form.label :id_contratista %>
+    <%= form.select :contractor_id, Contractor.ids %>
+  </div>
+
+  <div class="my-5">
     <%= form.label :cedula_de_contratistas %>
     <%= form.number_field :cedula_de_contratistas, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
