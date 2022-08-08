@@ -65,6 +65,6 @@ class PhonesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def phone_params
-      params.require(:phone).permit(:cedula_de_contratistas, :numero_de_telefono, :operador, :activo)
+      params.require(:phone).permit(:cedula_de_contratistas, :numero_de_telefono, :operador, :activo, :contractor_id)
     end
 end

@@ -65,6 +65,6 @@ class ContractorProfessionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def contractor_profession_params
-      params.require(:contractor_profession).permit(:cedula_contratista, :codigo_profesion, :nombre_profesion)
+      params.require(:contractor_profession).permit(:cedula_contratista, :codigo_profesion, :nombre_profesion, :contractor_id)
     end
 end

@@ -1,11 +1,16 @@
 <div class="w-full">
   <% if notice.present? %>
-    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+  <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
   <% end %>
 
   <div class="flex justify-between items-center">
     <h1 class="font-bold text-4xl">Phones</h1>
-    <%= link_to 'New phone', new_phone_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+    <%= link_to new_phone_path, class: "relative inline-block text-sm font-medium text-white group focus:outline-none focus:ring" do %>
+    <span class="absolute inset-0 border border-naranja group-active:border-naranja"></span>
+    <span
+      class="block px-12 py-3 transition-transform bg-naranja border border-naranja active:border-naranja active:bg-red-500 group-hover:-translate-x-1 group-hover:-translate-y-1">Añadir
+      telefono
+      <% end %>
   </div>
 
   <div id="phones" class="min-w-full">

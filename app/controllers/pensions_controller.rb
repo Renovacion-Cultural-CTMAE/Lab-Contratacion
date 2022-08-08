@@ -65,6 +65,6 @@ class PensionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def pension_params
-      params.require(:pension).permit(:cedula_contratista, :nit_de_la_entidad, :nombre_la_entidad, :telefono_de_la_entidad, :ciudad_de_la_entidad, :correo_de_la_entidad)
+      params.require(:pension).permit(:cedula_contratista, :nit_de_la_entidad, :nombre_la_entidad, :telefono_de_la_entidad, :ciudad_de_la_entidad, :correo_de_la_entidad, :contractor_id)
     end
 end
