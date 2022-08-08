@@ -65,6 +65,6 @@ class EmailsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def email_params
-      params.require(:email).permit(:cedula_de_contratistas, :correo, :activo)
+      params.require(:email).permit(:cedula_de_contratistas, :correo, :activo, :contractor_id)
     end
 end

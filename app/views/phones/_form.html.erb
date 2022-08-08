@@ -1,37 +1,42 @@
 <%= form_with(model: phone, class: "contents") do |form| %>
-  <% if phone.errors.any? %>
-    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2><%= pluralize(phone.errors.count, "error") %> prohibited this phone from being saved:</h2>
+<% if phone.errors.any? %>
+<div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+  <h2><%= pluralize(phone.errors.count, "error") %> prohibited this phone from being saved:</h2>
 
-      <ul>
-        <% phone.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <ul>
+    <% phone.errors.each do |error| %>
+    <li><%= error.full_message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
 
-  <div class="my-5">
-    <%= form.label :cedula_de_contratistas %>
-    <%= form.number_field :cedula_de_contratistas, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
+<div class="my-5">
+  <%= form.label :id_contratista %>
+  <%= form.select :contractor_id, Contractor.ids %>
+</div>
 
-  <div class="my-5">
-    <%= form.label :numero_de_telefono %>
-    <%= form.text_field :numero_de_telefono, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
+<div class="my-5">
+  <%= form.label :cedula_de_contratistas %>
+  <%= form.number_field :cedula_de_contratistas, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+</div>
 
-  <div class="my-5">
-    <%= form.label :operador %>
-    <%= form.text_field :operador, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
+<div class="my-5">
+  <%= form.label :numero_de_telefono %>
+  <%= form.text_field :numero_de_telefono, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+</div>
 
-  <div class="my-5">
-    <%= form.label :activo %>
-    <%= form.check_box :activo, class: "block mt-2 h-5 w-5" %>
-  </div>
+<div class="my-5">
+  <%= form.label :operador %>
+  <%= form.text_field :operador, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+</div>
 
-  <div class="inline">
-    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-naranja inline-block font-medium cursor-pointer" %>
-  </div>
+<div class="my-5">
+  <%= form.label :activo %>
+  <%= form.check_box :activo, class: "block mt-2 h-5 w-5" %>
+</div>
+
+<div class="inline">
+  <%= form.submit "Enviar", class: "rounded-lg py-3 px-5 bg-blue-600 text-naranja inline-block font-medium cursor-pointer" %>
+</div>
 <% end %>
