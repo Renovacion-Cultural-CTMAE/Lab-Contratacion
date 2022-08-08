@@ -15,8 +15,14 @@
   </p>
 
   <% if action_name != "show" %>
-    <%= link_to "Show this contractor profession", contractor_profession, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to 'Edit this contractor profession', edit_contractor_profession_path(contractor_profession), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+   <%= link_to contractor_profession, class: "relative inline-block text-sm font-medium text-white group focus:outline-none focus:ring" do %>
+    <span class="absolute inset-0 border border-naranja group-active:border-naranja"></span>
+    <span class="block px-12 py-3 transition-transform bg-naranja border border-naranja active:border-naranja active:bg-red-500 group-hover:-translate-x-1 group-hover:-translate-y-1">Mostrar las profesiones del contratista
+  <% end %>
+<%= link_to edit_contractor_profession_path(contractor_profession), class: "relative inline-block text-sm font-medium text-white group focus:outline-none focus:ring" do %>
+    <span class="absolute inset-0 border border-naranja group-active:border-naranja"></span>
+    <span class="block px-12 py-3 transition-transform bg-naranja border border-naranja active:border-naranja active:bg-red-500 group-hover:-translate-x-1 group-hover:-translate-y-1">Editar las profesiones del contratista
+  <% end %>
     <hr class="mt-6">
   <% end %>
 </div>
