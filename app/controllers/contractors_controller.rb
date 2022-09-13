@@ -65,6 +65,6 @@ class ContractorsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def contractor_params
-      params.require(:contractor).permit(:nombre, :apellido, :cedula_contratista, :lugar_expedicion_cedula, :fecha_expedicion_cedula, :edad, :fecha_de_nacimiento, :municipio_de_recidencia, :sexo, :numero_de_libreta_militar)
+      params.require(:contractor).permit(:nombre, :apellido, :id, :lugar_expedicion_cedula, :fecha_expedicion_cedula, :edad, :fecha_de_nacimiento, :municipio_de_recidencia, :sexo, :numero_de_libreta_militar)
     end
 end

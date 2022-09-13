@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cedula_contratista: 1
+  numero_contrato: 1
+  fecha_contrato: 2022-09-13
+  valor_contrato: 1.5
+  objeto_contrato: MyString
+
+two:
+  cedula_contratista: 1
+  numero_contrato: 1
+  fecha_contrato: 2022-09-13
+  valor_contrato: 1.5
+  objeto_contrato: MyString

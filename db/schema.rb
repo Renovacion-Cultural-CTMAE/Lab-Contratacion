@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_05_134331) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_13_210633) do
   create_table "contractor_professions", force: :cascade do |t|
     t.integer "cedula_contratista"
     t.string "codigo_profesion"
@@ -34,6 +34,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_05_134331) do
     t.integer "numero_de_libreta_militar"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "contracts", force: :cascade do |t|
+    t.integer "cedula_contratista"
+    t.integer "numero_contrato"
+    t.date "fecha_contrato"
+    t.float "valor_contrato"
+    t.string "objeto_contrato"
+    t.integer "contractor_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["contractor_id"], name: "index_contracts_on_contractor_id"
   end
 
   create_table "emails", force: :cascade do |t|
