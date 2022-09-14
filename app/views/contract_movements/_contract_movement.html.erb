@@ -1,0 +1,37 @@
+<div id="<%= dom_id contract_movement %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Numero contrato:</strong>
+    <%= contract_movement.numero_contrato %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Numero movimiento:</strong>
+    <%= contract_movement.numero_movimiento %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Fecha movimiento:</strong>
+    <%= contract_movement.fecha_movimiento %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Valor movimiento:</strong>
+    <%= contract_movement.valor_movimiento %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Saldo:</strong>
+    <%= contract_movement.saldo %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Observacion:</strong>
+    <%= contract_movement.observacion %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this contract movement", contract_movement, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this contract movement', edit_contract_movement_path(contract_movement), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

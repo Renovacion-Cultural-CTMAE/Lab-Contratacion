@@ -10,7 +10,52 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_13_210633) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_14_140823) do
+  create_table "contract_movements", force: :cascade do |t|
+    t.integer "numero_contrato"
+    t.integer "numero_movimiento"
+    t.date "fecha_movimiento"
+    t.integer "valor_movimiento"
+    t.integer "saldo"
+    t.text "observacion"
+    t.integer "contract_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["contract_id"], name: "index_contract_movements_on_contract_id"
+  end
+
+  create_table "contract_requirements", force: :cascade do |t|
+    t.integer "numero_contrato"
+    t.string "requisitos"
+    t.integer "codigo_requisitos"
+    t.string "nombre_requisito"
+    t.integer "contract_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["contract_id"], name: "index_contract_requirements_on_contract_id"
+  end
+
+  create_table "contract_statuses", force: :cascade do |t|
+    t.integer "numero_contrato"
+    t.date "fecha_del_estado"
+    t.string "motivos_contrato"
+    t.integer "contract_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["contract_id"], name: "index_contract_statuses_on_contract_id"
+  end
+
+  create_table "contract_supervisors", force: :cascade do |t|
+    t.integer "cedula_supervisor"
+    t.integer "numero_contrato"
+    t.date "fecha_inicio_supervicion"
+    t.integer "cedula_contratista"
+    t.integer "contract_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["contract_id"], name: "index_contract_supervisors_on_contract_id"
+  end
+
   create_table "contractor_professions", force: :cascade do |t|
     t.integer "cedula_contratista"
     t.string "codigo_profesion"
@@ -71,6 +116,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_13_210633) do
     t.index ["contractor_id"], name: "index_healths_on_contractor_id"
   end
 
+  create_table "payments", force: :cascade do |t|
+    t.integer "numero_contrato"
+    t.integer "numero_pago"
+    t.date "fecha_pago"
+    t.float "valor_pago"
+    t.text "observaciones"
+    t.integer "contract_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["contract_id"], name: "index_payments_on_contract_id"
+  end
+
   create_table "pensions", force: :cascade do |t|
     t.integer "cedula_contratista"
     t.integer "nit_de_la_entidad"
@@ -93,6 +150,19 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_13_210633) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["contractor_id"], name: "index_phones_on_contractor_id"
+  end
+
+  create_table "supervisors", force: :cascade do |t|
+    t.integer "cedula_supervisor"
+    t.string "nombre"
+    t.string "apellido"
+    t.string "telefono"
+    t.string "correo"
+    t.string "cargo"
+    t.integer "contract_supervisor_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["contract_supervisor_id"], name: "index_supervisors_on_contract_supervisor_id"
   end
 
   create_table "users", force: :cascade do |t|

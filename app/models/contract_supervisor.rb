@@ -1,0 +1,2 @@
+class ContractSupervisor < ApplicationRecord
+end

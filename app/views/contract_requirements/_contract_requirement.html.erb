@@ -1,0 +1,27 @@
+<div id="<%= dom_id contract_requirement %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Numero contrato:</strong>
+    <%= contract_requirement.numero_contrato %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Requisitos:</strong>
+    <%= contract_requirement.requisitos %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Codigo requisitos:</strong>
+    <%= contract_requirement.codigo_requisitos %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Nombre requisito:</strong>
+    <%= contract_requirement.nombre_requisito %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this contract requirement", contract_requirement, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this contract requirement', edit_contract_requirement_path(contract_requirement), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

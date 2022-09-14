@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  numero_contrato: 1
+  requisitos: MyString
+  codigo_requisitos: 1
+  nombre_requisito: MyString
+
+two:
+  numero_contrato: 1
+  requisitos: MyString
+  codigo_requisitos: 1
+  nombre_requisito: MyString

@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :supervisors
+  resources :contract_supervisors
+  resources :contract_movements
+  resources :payments
+  resources :contract_requirements
+  resources :contract_statuses
   resources :contracts
   devise_for :users
   resources :contractor_professions
