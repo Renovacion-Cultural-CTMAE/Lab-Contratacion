@@ -1,0 +1,2 @@
+class CurriculumDesign < ApplicationRecord
+end

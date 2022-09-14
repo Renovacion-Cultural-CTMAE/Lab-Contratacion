@@ -1,0 +1,37 @@
+<div id="<%= dom_id previous_study %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Codigo estudios:</strong>
+    <%= previous_study.codigo_estudios %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Fecha estudios:</strong>
+    <%= previous_study.fecha_estudios %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Valor estudios:</strong>
+    <%= previous_study.valor_estudios %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Codigo programa:</strong>
+    <%= previous_study.codigo_programa %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Codigo profesion:</strong>
+    <%= previous_study.codigo_profesion %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Cedula contratista:</strong>
+    <%= previous_study.cedula_contratista %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this previous study", previous_study, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this previous study', edit_previous_study_path(previous_study), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

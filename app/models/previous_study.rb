@@ -1,0 +1,2 @@
+class PreviousStudy < ApplicationRecord
+end

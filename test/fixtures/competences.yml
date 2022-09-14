@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  numero_competencia: 1
+  nombre_competencia: MyString
+  intencidad_horaria: 1
+  linea_transversal: MyString
+
+two:
+  numero_competencia: 1
+  nombre_competencia: MyString
+  intencidad_horaria: 1
+  linea_transversal: MyString

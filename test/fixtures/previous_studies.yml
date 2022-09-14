@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codigo_estudios: 1
+  fecha_estudios: 2022-09-14
+  valor_estudios: 1.5
+  codigo_programa: MyString
+  codigo_profesion: MyString
+  cedula_contratista: MyString
+
+two:
+  codigo_estudios: 1
+  fecha_estudios: 2022-09-14
+  valor_estudios: 1.5
+  codigo_programa: MyString
+  codigo_profesion: MyString
+  cedula_contratista: MyString

@@ -1,0 +1,2 @@
+class CompetencyCurriculumDesign < ApplicationRecord
+end

@@ -10,7 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_14_140823) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_14_165752) do
+  create_table "competences", force: :cascade do |t|
+    t.integer "numero_competencia"
+    t.string "nombre_competencia"
+    t.integer "intencidad_horaria"
+    t.string "linea_transversal"
+    t.integer "competency_curriculum_design_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["competency_curriculum_design_id"], name: "index_competences_on_competency_curriculum_design_id"
+  end
+
+  create_table "competency_curriculum_designs", force: :cascade do |t|
+    t.integer "numero_competencia"
+    t.string "codigo_diseño_curricural"
+    t.integer "curriculum_design_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["curriculum_design_id"], name: "index_competency_curriculum_designs_on_curriculum_design_id"
+  end
+
   create_table "contract_movements", force: :cascade do |t|
     t.integer "numero_contrato"
     t.integer "numero_movimiento"
@@ -93,6 +113,26 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_14_140823) do
     t.index ["contractor_id"], name: "index_contracts_on_contractor_id"
   end
 
+  create_table "curriculum_design_profiles", force: :cascade do |t|
+    t.string "codigo_diseño_curricural"
+    t.string "nombre_perfil"
+    t.string "tipos_perfiles"
+    t.integer "curriculum_design_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["curriculum_design_id"], name: "index_curriculum_design_profiles_on_curriculum_design_id"
+  end
+
+  create_table "curriculum_designs", force: :cascade do |t|
+    t.string "codigo_diseño_curricural"
+    t.string "nombre_diseño_curricural"
+    t.integer "numero_registro_calificado"
+    t.integer "program_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["program_id"], name: "index_curriculum_designs_on_program_id"
+  end
+
   create_table "emails", force: :cascade do |t|
     t.integer "cedula_de_contratistas"
     t.string "correo"
@@ -150,6 +190,32 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_14_140823) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["contractor_id"], name: "index_phones_on_contractor_id"
+  end
+
+  create_table "previous_studies", force: :cascade do |t|
+    t.integer "codigo_estudios"
+    t.date "fecha_estudios"
+    t.float "valor_estudios"
+    t.string "codigo_programa"
+    t.string "codigo_profesion"
+    t.string "cedula_contratista"
+    t.integer "contractor_id"
+    t.integer "contract_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["contract_id"], name: "index_previous_studies_on_contract_id"
+    t.index ["contractor_id"], name: "index_previous_studies_on_contractor_id"
+  end
+
+  create_table "programs", force: :cascade do |t|
+    t.string "codigo_diseño_curricural"
+    t.string "codigo_programa"
+    t.string "nombre_programa"
+    t.integer "intensidad_horaria_programa"
+    t.integer "previous_study_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["previous_study_id"], name: "index_programs_on_previous_study_id"
   end
 
   create_table "supervisors", force: :cascade do |t|

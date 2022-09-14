@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :competences
+  resources :competency_curriculum_designs
+  resources :curriculum_design_profiles
+  resources :curriculum_designs
+  resources :programs
+  resources :previous_studies
   resources :supervisors
   resources :contract_supervisors
   resources :contract_movements

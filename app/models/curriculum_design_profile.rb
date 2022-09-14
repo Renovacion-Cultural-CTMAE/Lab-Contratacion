@@ -1,0 +1,2 @@
+class CurriculumDesignProfile < ApplicationRecord
+end
