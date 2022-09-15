@@ -4,5 +4,7 @@ class Contract < ApplicationRecord
   has_many :contract_requirements
   has_many :contract_statuses
   has_many :payments
+  has_many :contract_requirements
+  has_many :contract_supervisors
   
 end
