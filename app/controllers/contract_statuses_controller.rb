@@ -65,6 +65,6 @@ class ContractStatusesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def contract_status_params
-      params.require(:contract_status).permit(:numero_contrato, :fecha_del_estado, :motivos_contrato)
+      params.require(:contract_status).permit(:numero_contrato, :fecha_del_estado, :motivos_contrato, :contract_id)
     end
 end

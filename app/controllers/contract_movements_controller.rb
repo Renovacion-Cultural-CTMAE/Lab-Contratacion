@@ -65,6 +65,6 @@ class ContractMovementsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def contract_movement_params
-      params.require(:contract_movement).permit(:numero_contrato, :numero_movimiento, :fecha_movimiento, :valor_movimiento, :saldo, :observacion)
+      params.require(:contract_movement).permit(:numero_contrato, :numero_movimiento, :fecha_movimiento, :valor_movimiento, :saldo, :observacion, :contract_id)
     end
 end
