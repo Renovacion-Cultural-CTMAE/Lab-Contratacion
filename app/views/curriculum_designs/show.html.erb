@@ -11,5 +11,16 @@
       <%= button_to 'Destroy this curriculum_design', curriculum_design_path(@curriculum_design), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
     </div>
     <%= link_to 'Back to curriculum_designs', curriculum_designs_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-8">
+    <div class="mt-8 mb-8">
+      <%= link_to new_curriculum_design_profile_path, class: "relative inline-block text-sm font-medium text-white group focus:outline-none focus:ring" do %>
+        <span class="absolute inset-0 border border-naranja group-active:border-naranja"></span>
+        <span class="block px-12 py-3 transition-transform bg-naranja border border-naranja active:border-naranja active:bg-red-500 group-hover:-translate-x-1 group-hover:-translate-y-1">Agregar Perfiles del diseño curricural
+      <% end %>
+      <%= link_to new_competency_curriculum_design_path, class: "relative inline-block text-sm font-medium text-white group focus:outline-none focus:ring" do %>
+        <span class="absolute inset-0 border border-naranja group-active:border-naranja"></span>
+        <span class="block px-12 py-3 transition-transform bg-naranja border border-naranja active:border-naranja active:bg-red-500 group-hover:-translate-x-1 group-hover:-translate-y-1">Agregar Competencia del diseño curricural
+      <% end %>
+    </div>
   </div>
 </div>

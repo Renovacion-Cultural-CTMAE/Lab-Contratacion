@@ -11,5 +11,41 @@
       <%= button_to 'Destroy this contract', contract_path(@contract), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
     </div>
     <%= link_to 'Back to contracts', contracts_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-8">
+    <div class="mt-8 mb-8">
+      <%= link_to new_contract_status_path, class: "relative inline-block text-sm font-medium text-white group focus:outline-none focus:ring" do %>
+        <span class="absolute inset-0 border border-naranja group-active:border-naranja"></span>
+        <span class="block px-12 py-3 transition-transform bg-naranja border border-naranja active:border-naranja active:bg-red-500 group-hover:-translate-x-1 group-hover:-translate-y-1">Agregar estados de el contrato
+        <% end %>
+      <%= link_to new_contract_requirement_path, class: "relative inline-block text-sm font-medium text-white group focus:outline-none focus:ring" do %>
+        <span class="absolute inset-0 border border-naranja group-active:border-naranja"></span>
+        <span class="block px-12 py-3 transition-transform bg-naranja border border-naranja active:border-naranja active:bg-red-500 group-hover:-translate-x-1 group-hover:-translate-y-1">Agregar requisitos de el contrato
+      <% end %>
+      <%= link_to new_payment_path, class: "relative inline-block text-sm font-medium text-white group focus:outline-none focus:ring" do %>
+        <span class="absolute inset-0 border border-naranja group-active:border-naranja"></span>
+        <span class="block px-12 py-3 transition-transform bg-naranja border border-naranja active:border-naranja active:bg-red-500 group-hover:-translate-x-1 group-hover:-translate-y-1">Agregar pagos a este contrato
+      <% end %>
+    </div>
+    <div class="mt-8 mb-8">
+      <%= link_to new_contract_movement_path, class: "relative inline-block text-sm font-medium text-white group focus:outline-none focus:ring" do %>
+        <span class="absolute inset-0 border border-naranja group-active:border-naranja"></span>
+        <span class="block px-12 py-3 transition-transform bg-naranja border border-naranja active:border-naranja active:bg-red-500 group-hover:-translate-x-1 group-hover:-translate-y-1">Agregar movimientos a este contrato
+      <% end %>
+      <%= link_to new_contract_supervisor_path, class: "relative inline-block text-sm font-medium text-white group focus:outline-none focus:ring" do %>
+        <span class="absolute inset-0 border border-naranja group-active:border-naranja"></span>
+        <span class="block px-12 py-3 transition-transform bg-naranja border border-naranja active:border-naranja active:bg-red-500 group-hover:-translate-x-1 group-hover:-translate-y-1">Agregar supervisores del contrato
+      <% end %>
+      <%= link_to new_supervisor_path, class: "relative inline-block text-sm font-medium text-white group focus:outline-none focus:ring" do %>
+        <span class="absolute inset-0 border border-naranja group-active:border-naranja"></span>
+        <span class="block px-12 py-3 transition-transform bg-naranja border border-naranja active:border-naranja active:bg-red-500 group-hover:-translate-x-1 group-hover:-translate-y-1">Agregar supervisores
+      <% end %>
+    </div>
+    <hr class="mt-8">
+    <div class="mt-8 mb-8">
+      <%= link_to new_previous_study_path, class: "relative inline-block text-sm font-medium text-white group focus:outline-none focus:ring" do %>
+        <span class="absolute inset-0 border border-naranja group-active:border-naranja"></span>
+        <span class="block px-12 py-3 transition-transform bg-naranja border border-naranja active:border-naranja active:bg-red-500 group-hover:-translate-x-1 group-hover:-translate-y-1">Agregar estudios previos
+      <% end %>
+    </div>
   </div>
 </div>
