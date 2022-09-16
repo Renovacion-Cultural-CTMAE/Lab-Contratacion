@@ -83,4 +83,4 @@ production:
   <<: *default
   database: Lab_Contratacion_production
   username: Lab_Contratacion
-  password: <%= ENV["LAB_CONTRATACION_DATABASE_PASSWORD"] %>
+  password: <%= ENV["DATABASE_URL"] %>
