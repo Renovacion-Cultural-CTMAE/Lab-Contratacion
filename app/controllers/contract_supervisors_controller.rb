@@ -65,6 +65,6 @@ class ContractSupervisorsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def contract_supervisor_params
-      params.require(:contract_supervisor).permit(:cedula_supervisor, :numero_contrato, :fecha_inicio_supervicion, :cedula_contratista)
+      params.require(:contract_supervisor).permit(:cedula_supervisor, :numero_contrato, :fecha_inicio_supervicion, :cedula_contratista, :contract_id)
     end
 end
