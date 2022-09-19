@@ -6,7 +6,7 @@
     <% end %>
 
     <%= render @contractor %>
-
+  <div class="renovacion">
     <%= link_to edit_contractor_path(@contractor), class: "relative inline-block text-sm font-medium text-white group focus:outline-none focus:ring" do %>
       <span class="absolute inset-0 border border-naranja group-active:border-naranja"></span>
       <span class="block px-12 py-3 transition-transform bg-naranja border border-naranja active:border-naranja active:bg-red-500 group-hover:-translate-x-1 group-hover:-translate-y-1">Editar
@@ -19,8 +19,13 @@
     <%= link_to contractor_path, class: "relative inline-block text-sm font-medium text-white group focus:outline-none focus:ring" do %>
       <span class="absolute inset-0 border border-naranja group-active:border-naranja"></span>
       <span class="block px-12 py-3 transition-transform bg-naranja border border-naranja active:border-naranja active:bg-red-500 group-hover:-translate-x-1 group-hover:-translate-y-1">Regresar
+      <% end %>
+
+    <%= link_to '#', class: "relative inline-block text-sm font-medium text-white group focus:outline-none focus:ring", onclick: 'window.print();return false;'  do %>
+      <span class="absolute inset-0 border border-naranja group-active:border-naranja"></span>
+      <span class="block px-12 py-3 transition-transform bg-naranja border border-naranja active:border-naranja active:bg-red-500 group-hover:-translate-x-1 group-hover:-translate-y-1">Imprimir
     <% end %>
-    <hr class="mt-8">
+     <hr class="mt-8">
 
       <div class="mt-8 mb-8">
         <%= link_to new_pension_path, class: "relative inline-block text-sm font-medium text-white group focus:outline-none focus:ring" do %>
@@ -54,4 +59,5 @@
         <% end %>
       </div>
   </div>
-</div>
+  </div>
+  </div>
