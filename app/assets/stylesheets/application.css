@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+@media print {
+  body {
+    background: #FFF;
+ }
+ .renovacion{
+  display: none;
+ }
+}
