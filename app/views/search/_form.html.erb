@@ -1,0 +1,8 @@
+<%= search_form_for @q do |f| %>
+
+  # Search if the name field contains...
+  <%= f.label :Prueba %>
+  <%= f.search_field :contractors_nombre_cont_any %>
+
+  <%= f.submit %>
+<% end %>
