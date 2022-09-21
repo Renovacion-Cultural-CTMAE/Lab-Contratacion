@@ -3,7 +3,9 @@ class ContractorsController < ApplicationController
 
   # GET /contractors or /contractors.json
   def index
-    @contractors = Contractor.all
+    @q = Contractor.ransack(params[:q])
+    # @contractors = Contractor.all
+    @contractors = @q.result
   end
 
   # GET /contractors/1 or /contractors/1.json
