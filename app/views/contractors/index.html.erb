@@ -13,6 +13,14 @@
       <% end %>
   </div>
 
+  <div class="mt-5">
+    <%= search_form_for @q do |f| %>
+      <%= f.label :Buscar_por_nombre %>
+      <%= f.search_field :nombre_cont %>
+      <%= f.submit "Buscar" %>
+    <% end %>
+  </div>
+
   <div id="contractors" class="min-w-full">
     <%= render @contractors %>
   </div>
