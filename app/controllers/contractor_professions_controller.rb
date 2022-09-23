@@ -1,9 +1,12 @@
 class ContractorProfessionsController < ApplicationController
   before_action :set_contractor_profession, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /contractor_professions or /contractor_professions.json
   def index
     @contractor_professions = ContractorProfession.all
+    @q = ContractorProfession.ransack(params[:q])
+    @contractor_professions = @q.result.includes(:contractor)
   end
 
   # GET /contractor_professions/1 or /contractor_professions/1.json

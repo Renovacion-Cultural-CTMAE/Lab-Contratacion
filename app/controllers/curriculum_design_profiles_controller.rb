@@ -1,9 +1,12 @@
 class CurriculumDesignProfilesController < ApplicationController
   before_action :set_curriculum_design_profile, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /curriculum_design_profiles or /curriculum_design_profiles.json
   def index
     @curriculum_design_profiles = CurriculumDesignProfile.all
+    @q = CurriculumDesignProfile.ransack(params[:q])
+    @curriculum_design_profiles = @q.result.includes(:curriculum_design)
   end
 
   # GET /curriculum_design_profiles/1 or /curriculum_design_profiles/1.json

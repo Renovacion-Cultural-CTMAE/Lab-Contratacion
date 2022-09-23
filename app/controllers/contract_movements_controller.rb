@@ -1,9 +1,12 @@
 class ContractMovementsController < ApplicationController
   before_action :set_contract_movement, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /contract_movements or /contract_movements.json
   def index
     @contract_movements = ContractMovement.all
+    @q = ContractMovement.ransack(params[:q])
+    @contract_movements = @q.result.includes(:contract)
   end
 
   # GET /contract_movements/1 or /contract_movements/1.json

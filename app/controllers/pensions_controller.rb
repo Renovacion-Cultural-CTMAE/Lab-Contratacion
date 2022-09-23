@@ -1,9 +1,12 @@
 class PensionsController < ApplicationController
   before_action :set_pension, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /pensions or /pensions.json
   def index
     @pensions = Pension.all
+    @q = Pension.ransack(params[:q])
+    @pensions = @q.result.includes(:contractor)
   end
 
   # GET /pensions/1 or /pensions/1.json

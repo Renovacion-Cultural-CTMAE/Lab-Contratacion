@@ -1,9 +1,12 @@
 class CompetencyCurriculumDesignsController < ApplicationController
   before_action :set_competency_curriculum_design, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /competency_curriculum_designs or /competency_curriculum_designs.json
   def index
     @competency_curriculum_designs = CompetencyCurriculumDesign.all
+    @q = CompetencyCurriculumDesign.ransack(params[:q])
+    @competency_curriculum_designs = @q.result.includes(:curriculum_design)
   end
 
   # GET /competency_curriculum_designs/1 or /competency_curriculum_designs/1.json

@@ -12,4 +12,8 @@
     </div>
     <%= link_to 'Back to contract_statuses', contract_statuses_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
   </div>
+    <%= link_to '#', class: "relative inline-block text-sm font-medium text-white group focus:outline-none focus:ring", onclick: 'window.print();return false;'  do %>
+      <span class="absolute inset-0 border border-naranja group-active:border-naranja"></span>
+      <span class="block px-12 py-3 transition-transform bg-naranja border border-naranja active:border-naranja active:bg-red-500 group-hover:-translate-x-1 group-hover:-translate-y-1">Imprimir
+    <% end %>
 </div>

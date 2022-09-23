@@ -1,5 +1,6 @@
 class ContractorsController < ApplicationController
   before_action :set_contractor, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /contractors or /contractors.json
   def index

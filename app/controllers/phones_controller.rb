@@ -1,9 +1,12 @@
 class PhonesController < ApplicationController
   before_action :set_phone, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /phones or /phones.json
   def index
     @phones = Phone.all
+    @q = Phone.ransack(params[:q])
+    @phones = @q.result.includes(:contractor)
   end
 
   # GET /phones/1 or /phones/1.json
