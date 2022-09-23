@@ -1,9 +1,12 @@
 class PreviousStudiesController < ApplicationController
   before_action :set_previous_study, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /previous_studies or /previous_studies.json
   def index
     @previous_studies = PreviousStudy.all
+    @q = PreviousStudy.ransack(params[:q])
+    @previous_studies = @q.result.includes(:contractor)
   end
 
   # GET /previous_studies/1 or /previous_studies/1.json

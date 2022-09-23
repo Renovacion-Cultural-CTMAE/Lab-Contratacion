@@ -1,9 +1,12 @@
 class ContractSupervisorsController < ApplicationController
   before_action :set_contract_supervisor, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /contract_supervisors or /contract_supervisors.json
   def index
     @contract_supervisors = ContractSupervisor.all
+    @q = ContractSupervisor.ransack(params[:q])
+    @contract_supervisors = @q.result.includes(:contract)
   end
 
   # GET /contract_supervisors/1 or /contract_supervisors/1.json

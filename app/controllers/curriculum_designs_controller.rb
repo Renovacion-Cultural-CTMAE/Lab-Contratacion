@@ -1,9 +1,12 @@
 class CurriculumDesignsController < ApplicationController
   before_action :set_curriculum_design, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /curriculum_designs or /curriculum_designs.json
   def index
     @curriculum_designs = CurriculumDesign.all
+    @q = CurriculumDesign.ransack(params[:q])
+    @curriculum_designs = @q.result.includes(:program)
   end
 
   # GET /curriculum_designs/1 or /curriculum_designs/1.json

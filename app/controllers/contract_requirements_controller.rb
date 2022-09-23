@@ -1,9 +1,12 @@
 class ContractRequirementsController < ApplicationController
   before_action :set_contract_requirement, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /contract_requirements or /contract_requirements.json
   def index
     @contract_requirements = ContractRequirement.all
+    @q = ContractRequirement.ransack(params[:q])
+    @contract_requirements = @q.result.includes(:contract)
   end
 
   # GET /contract_requirements/1 or /contract_requirements/1.json

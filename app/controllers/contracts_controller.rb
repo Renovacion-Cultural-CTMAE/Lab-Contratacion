@@ -1,9 +1,12 @@
 class ContractsController < ApplicationController
   before_action :set_contract, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /contracts or /contracts.json
   def index
     @contracts = Contract.all
+    @q = Contract.ransack(params[:q])
+    @contracts = @q.result.includes(:contractor)
   end
 
   # GET /contracts/1 or /contracts/1.json

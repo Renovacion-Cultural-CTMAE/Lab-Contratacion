@@ -5,4 +5,10 @@ class Contractor < ApplicationRecord
     has_one  :health
     has_one  :pension 
     has_many :previous_studies
+
+    private
+
+    ransacker :id do
+    Arel.sql("to_char(\"#{table_name}\".\"id\", '9999999999999999')")
+  end
 end

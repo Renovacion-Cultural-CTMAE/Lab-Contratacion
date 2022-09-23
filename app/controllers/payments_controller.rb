@@ -1,9 +1,12 @@
 class PaymentsController < ApplicationController
   before_action :set_payment, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /payments or /payments.json
   def index
     @payments = Payment.all
+    @q = Payment.ransack(params[:q])
+    @payments = @q.result.includes(:contract)
   end
 
   # GET /payments/1 or /payments/1.json

@@ -1,9 +1,12 @@
 class HealthsController < ApplicationController
   before_action :set_health, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /healths or /healths.json
   def index
     @healths = Health.all
+    @q = Health.ransack(params[:q])
+    @healths = @q.result.includes(:contractor)
   end
 
   # GET /healths/1 or /healths/1.json
