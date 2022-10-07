@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :previous_studies
+  get 'previous_studies/report'
   get 'search', to: 'search#index'
   resources :competences
   resources :competency_curriculum_designs
