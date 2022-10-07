@@ -14,12 +14,26 @@ class PreviousStudiesTest < ApplicationSystemTestCase
     visit previous_studies_url
     click_on "New previous study"
 
-    fill_in "Cedula contratista", with: @previous_study.cedula_contratista
-    fill_in "Codigo estudios", with: @previous_study.codigo_estudios
-    fill_in "Codigo profesion", with: @previous_study.codigo_profesion
-    fill_in "Codigo programa", with: @previous_study.codigo_programa
-    fill_in "Fecha estudios", with: @previous_study.fecha_estudios
-    fill_in "Valor estudios", with: @previous_study.valor_estudios
+    check "Contratacion acuerdo comercial" if @previous_study.contratacion_acuerdo_comercial
+    check "Contratacion plan adquisiciones" if @previous_study.contratacion_plan_adquisiciones
+    fill_in "Domicilio contractual", with: @previous_study.domicilio_contractual
+    fill_in "Educacion", with: @previous_study.educacion
+    fill_in "Experiencia", with: @previous_study.experiencia
+    fill_in "Justificacion necesidad contratacion", with: @previous_study.justificacion_necesidad_contratacion
+    fill_in "Justificacion valor contrato", with: @previous_study.justificacion_valor_contrato
+    fill_in "Lugar", with: @previous_study.lugar
+    fill_in "Nivel", with: @previous_study.nivel
+    fill_in "Nombre centro", with: @previous_study.nombre_centro
+    fill_in "Numero contratos", with: @previous_study.numero_contratos
+    fill_in "Objeto", with: @previous_study.objeto
+    fill_in "Obligaciones", with: @previous_study.obligaciones
+    fill_in "Ordenador", with: @previous_study.ordenador
+    fill_in "Perfil", with: @previous_study.perfil
+    fill_in "Plazo", with: @previous_study.plazo
+    fill_in "Supervisor", with: @previous_study.supervisor
+    fill_in "Valor forma pago", with: @previous_study.valor_forma_pago
+    fill_in "Valor mes", with: @previous_study.valor_mes
+    fill_in "Valor total contrato", with: @previous_study.valor_total_contrato
     click_on "Create Previous study"
 
     assert_text "Previous study was successfully created"
@@ -30,12 +44,26 @@ class PreviousStudiesTest < ApplicationSystemTestCase
     visit previous_study_url(@previous_study)
     click_on "Edit this previous study", match: :first
 
-    fill_in "Cedula contratista", with: @previous_study.cedula_contratista
-    fill_in "Codigo estudios", with: @previous_study.codigo_estudios
-    fill_in "Codigo profesion", with: @previous_study.codigo_profesion
-    fill_in "Codigo programa", with: @previous_study.codigo_programa
-    fill_in "Fecha estudios", with: @previous_study.fecha_estudios
-    fill_in "Valor estudios", with: @previous_study.valor_estudios
+    check "Contratacion acuerdo comercial" if @previous_study.contratacion_acuerdo_comercial
+    check "Contratacion plan adquisiciones" if @previous_study.contratacion_plan_adquisiciones
+    fill_in "Domicilio contractual", with: @previous_study.domicilio_contractual
+    fill_in "Educacion", with: @previous_study.educacion
+    fill_in "Experiencia", with: @previous_study.experiencia
+    fill_in "Justificacion necesidad contratacion", with: @previous_study.justificacion_necesidad_contratacion
+    fill_in "Justificacion valor contrato", with: @previous_study.justificacion_valor_contrato
+    fill_in "Lugar", with: @previous_study.lugar
+    fill_in "Nivel", with: @previous_study.nivel
+    fill_in "Nombre centro", with: @previous_study.nombre_centro
+    fill_in "Numero contratos", with: @previous_study.numero_contratos
+    fill_in "Objeto", with: @previous_study.objeto
+    fill_in "Obligaciones", with: @previous_study.obligaciones
+    fill_in "Ordenador", with: @previous_study.ordenador
+    fill_in "Perfil", with: @previous_study.perfil
+    fill_in "Plazo", with: @previous_study.plazo
+    fill_in "Supervisor", with: @previous_study.supervisor
+    fill_in "Valor forma pago", with: @previous_study.valor_forma_pago
+    fill_in "Valor mes", with: @previous_study.valor_mes
+    fill_in "Valor total contrato", with: @previous_study.valor_total_contrato
     click_on "Update Previous study"
 
     assert_text "Previous study was successfully updated"

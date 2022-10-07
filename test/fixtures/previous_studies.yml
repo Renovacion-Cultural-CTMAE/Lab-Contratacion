@@ -1,17 +1,45 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  codigo_estudios: 1
-  fecha_estudios: 2022-09-14
-  valor_estudios: 1.5
-  codigo_programa: MyString
-  codigo_profesion: MyString
-  cedula_contratista: MyString
+  objeto: MyText
+  educacion: MyText
+  experiencia: MyString
+  valor_forma_pago: MyText
+  plazo: MyString
+  lugar: MyString
+  supervisor: MyString
+  ordenador: MyString
+  nombre_centro: MyString
+  justificacion_necesidad_contratacion: MyText
+  obligaciones: MyText
+  nivel: MyString
+  perfil: MyText
+  numero_contratos: 1
+  valor_mes: 1.5
+  valor_total_contrato: 1.5
+  domicilio_contractual: MyString
+  justificacion_valor_contrato: MyText
+  contratacion_acuerdo_comercial: false
+  contratacion_plan_adquisiciones: false
 
 two:
-  codigo_estudios: 1
-  fecha_estudios: 2022-09-14
-  valor_estudios: 1.5
-  codigo_programa: MyString
-  codigo_profesion: MyString
-  cedula_contratista: MyString
+  objeto: MyText
+  educacion: MyText
+  experiencia: MyString
+  valor_forma_pago: MyText
+  plazo: MyString
+  lugar: MyString
+  supervisor: MyString
+  ordenador: MyString
+  nombre_centro: MyString
+  justificacion_necesidad_contratacion: MyText
+  obligaciones: MyText
+  nivel: MyString
+  perfil: MyText
+  numero_contratos: 1
+  valor_mes: 1.5
+  valor_total_contrato: 1.5
+  domicilio_contractual: MyString
+  justificacion_valor_contrato: MyText
+  contratacion_acuerdo_comercial: false
+  contratacion_plan_adquisiciones: false
