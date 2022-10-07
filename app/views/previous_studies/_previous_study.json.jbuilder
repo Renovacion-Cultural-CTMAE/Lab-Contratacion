@@ -1,2 +1,2 @@
-json.extract! previous_study, :id, :codigo_estudios, :fecha_estudios, :valor_estudios, :codigo_programa, :codigo_profesion, :cedula_contratista, :created_at, :updated_at
+json.extract! previous_study, :id, :objeto, :educacion, :experiencia, :valor_forma_pago, :plazo, :lugar, :supervisor, :ordenador, :nombre_centro, :justificacion_necesidad_contratacion, :obligaciones, :nivel, :perfil, :numero_contratos, :valor_mes, :valor_total_contrato, :domicilio_contractual, :justificacion_valor_contrato, :contratacion_acuerdo_comercial, :contratacion_plan_adquisiciones, :created_at, :updated_at
 json.url previous_study_url(previous_study, format: :json)

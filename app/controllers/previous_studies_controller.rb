@@ -1,12 +1,9 @@
 class PreviousStudiesController < ApplicationController
   before_action :set_previous_study, only: %i[ show edit update destroy ]
-  before_action :authenticate_user!
 
   # GET /previous_studies or /previous_studies.json
   def index
     @previous_studies = PreviousStudy.all
-    @q = PreviousStudy.ransack(params[:q])
-    @previous_studies = @q.result.includes(:contractor)
   end
 
   # GET /previous_studies/1 or /previous_studies/1.json
@@ -68,6 +65,6 @@ class PreviousStudiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def previous_study_params
-      params.require(:previous_study).permit(:codigo_estudios, :fecha_estudios, :valor_estudios, :codigo_programa, :codigo_profesion, :cedula_contratista)
+      params.require(:previous_study).permit(:objeto, :educacion, :experiencia, :valor_forma_pago, :plazo, :lugar, :supervisor, :ordenador, :nombre_centro, :justificacion_necesidad_contratacion, :obligaciones, :nivel, :perfil, :numero_contratos, :valor_mes, :valor_total_contrato, :domicilio_contractual, :justificacion_valor_contrato, :contratacion_acuerdo_comercial, :contratacion_plan_adquisiciones)
     end
 end
