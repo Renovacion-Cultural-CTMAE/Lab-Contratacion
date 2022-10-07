@@ -1,0 +1,160 @@
+body{
+    margin: 50px;
+}
+
+#logo_sena{
+    text-align: center;
+}
+
+#titulo{
+    text-align: center;
+    padding: 10px;
+}
+
+#primer_texto{
+    text-align: justify;
+    padding: 5px;
+}
+#segundo_texto{
+    text-align: justify;
+    padding: 5px;
+}
+
+#punto_uno{
+    text-align: justify;
+    padding: 5px;
+}
+
+#punto_dos{
+    text-align: justify;
+    padding: 5px;
+}
+
+#punto_tres{
+    text-align: justify;
+    padding: 5px;
+}
+
+#punto_cuatro{
+    text-align: justify;
+    padding: 5px;
+}
+
+#punto_cinco{
+    text-align: justify;
+    padding: 5px;
+}
+
+#punto_seis{
+    text-align: justify;
+    padding: 5px;
+}
+
+#punto_siete{
+    text-align: justify;
+    padding: 5px;
+}
+
+#punto_ocho{
+    text-align: justify;
+    padding: 5px;
+}
+
+#punto_nueve{
+    text-align: justify;
+    padding: 5px;
+}
+
+#punto_diez{
+    text-align: justify;
+    padding: 5px;
+}
+
+#punto_once{
+    text-align: justify;
+    padding: 5px;
+}
+
+#punto_doce{
+    text-align: justify;
+    padding: 5px;
+}
+
+#punto_trece{
+    text-align: justify;
+    padding: 5px;
+}
+
+#punto_catorce{
+    text-align: justify;
+    padding: 5px;
+}
+
+#punto_catorce_uno{
+    text-align: justify;
+    padding: 5px;
+}
+
+#punto_catorce_dos{
+    text-align: justify;
+    padding: 5px;
+}
+
+#punto_catorce_tres{
+    text-align: justify;
+    padding: 5px;
+}
+
+#punto_quince{
+    text-align: justify;
+    padding: 5px;
+}
+
+#texto_final{
+    text-align: justify;
+    padding: 5px;
+}
+
+#pie_pagina{
+    text-align: center;
+    padding: 10px;
+}
+
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table{
+    width: center;
+}
+
+td{
+    padding: 10px;
+    text-align: justify;
+}
+
+th{
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+#tabla_experiencia{
+    padding: 10px;
+    text-align: justify;
+}
+
+#tabla_idoneidad{
+    padding: 10px;
+    text-align: justify;
+}
+
+div, p{
+    text-align: justify;
+}
+
+li{
+    text-align: justify, right;
+}

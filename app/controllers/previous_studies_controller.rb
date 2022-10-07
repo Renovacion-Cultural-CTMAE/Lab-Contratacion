@@ -8,6 +8,15 @@ class PreviousStudiesController < ApplicationController
 
   # GET /previous_studies/1 or /previous_studies/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "estudios_previos", template: 'previous_studies/report', formats:[:html]
+      end
+    end
+  end
+
+  def report
   end
 
   # GET /previous_studies/new
