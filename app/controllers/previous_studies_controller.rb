@@ -11,7 +11,8 @@ class PreviousStudiesController < ApplicationController
     respond_to do |format|
       format.html
       format.pdf do
-        render pdf: "estudios_previos", template: 'previous_studies/report', formats:[:html]
+        render pdf: "estudios_previos", template: 'previous_studies/report', formats:[:html], 
+          header: { html: { template: 'previous_studies/header', formats:[:html]}}
       end
     end
   end
