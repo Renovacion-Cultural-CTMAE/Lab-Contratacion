@@ -8,6 +8,7 @@
     <%= wicked_pdf_stylesheet_link_tag "pdf" -%>
 </head>
 <body>
+
     <div id="logo_sena">
        <%= wicked_pdf_image_tag 'Logo_Sena.png' %>
     </div>
@@ -16,66 +17,56 @@
         <h2>FORMATO ESTUDIO PREVIO</h2>
     </div>
     <div id="primer_texto">
-        <p>PARA DETERMINAR LA CONVENIENCIA Y OPORTUNIDAD  PARA CONTRATOS DE PRESTACIÓN DE SERVICIOS PROFESIONALES Y/O DE APOYO A LA GESTIÓN </p>
+        <p>PARA DETERMINAR LA CONVENIENCIA Y OPORTUNIDAD  PARA CONTRATOS DE PRESTACIÓN DE SERVICIOS PROFESIONALES Y/O DE APOYO A LA GESTIÓN  </p>
     </div>
     <div class="container">
         <table>
             <tr>
                 <th>OBJETO:</th>
-                <td>(Describa el objeto contractual de acuerdo con el Plan Anual de Adquisiciones. Se debe destacar la temporalidad y excepcionalidad del objeto contractual. No debe contener las obligaciones específicas. Para contratos de servicios profesionales, la redacción deberá indicar: Prestación de servicios profesionales… y para la contratación de servicios no profesionales deberá señalar: Prestación de servicios de apoyo a la gestión. Verificar lineamientos de la Circular 3-2021-000202 del 21/10/2021)</th>
+                <td> <%= @previous_study.objeto %> </th>
             </tr>
             <tr>
                 <th>EDUCACIÓN Y/O FORMACIÓN:</th>
-                <td>(Educación formal Bachiller, Técnico, Tecnólogo, Profesional, especialización, maestrías y doctorados…etc. Ver tabla de honorarios vigente)</td>
+                <td> <%= @previous_study.educacion %> </td>
             </tr>
             <tr>
                 <th>EXPERIENCIA RELACIONADA:</th>
-                <td>(Exigir solo experiencia adquirida en el ejercicio de empleos o ejecución de contratos anteriores o actividades que tengan funciones u obligaciones específicas similares o relacionadas a las que se requieren para la ejecución contractual, teniendo en cuenta contabilizar la correspondiente al grado de formación académica exigida en “Educación y/o Formación”)</td>
+                <td> <%= @previous_study.experiencia %> </td>
             </tr>
             <tr>
                 <th>VALOR Y FORMA DE PAGO:</th>
-                <td>Se fija como valor total para el contrato la suma de ….PESOS M/CTE.($…….). Esta suma será pagada por el SENA al contratista de la siguiente manera: a) Un primer pago correspondiente al mes de …. de 20… por valor de …. PESOS M/CTE. ($ ….), b) (……) pagos iguales por los meses de (……) a (……) de 20…, por valor de …. PESOS M/CTE. ($....) cada uno.</td>
+                <td> <%= @previous_study.valor_forma_pago %> </td>
             </tr>
             <tr>
                 <th>PLAZO:</th>
-                <td>Hasta el (fecha de finalización del contrato)</td>
+                <td> <%= @previous_study.plazo %> </td>
             </tr>
             <tr>
                 <th>LUGAR DE EJECUCIÓN:</th>
-                <td>(Municipio/ ciudad  en el cual el contratista ejecutará el contrato)</td>
+                <td> <%= @previous_study.lugar %> </td>
             </tr>
             <tr>
                 <th>SUPERVISOR:</th>
-                <td>(La supervisión del contrato estará a cargo de (cargo y Área) o quien designe el ordenador del pago o director de área o jefe de oficina)</td>
+                <td> <%= @previous_study.supervisor %> </td>
             </tr>
             <tr>
                 <th>ORDENADOR DEL PAGO:</th>
-                <td>Directivo que tiene la función de suscribir las cuentas cobro</td>
+                <td> <%= @previous_study.ordenador %> </td>
             </tr>
         </table>
     </div>
     <div id="segundo_texto">
-        <p>De conformidad con lo establecido en los numerales 7 y 12 del artículo 25 de la Ley 80 de 1993 y el artículo 20 del Decreto 1510 de 2013 Decreto compilado por el artículo 2.2.1.1.2.1.1 del Decreto 1082 de 2015, así como lo dispuesto en el literal h) del numeral 4 del artículo 2 de la Ley 1150 de 2007, en concordancia con el artículo 2.2.1.2.1.4.9 del Decreto 1082 de 2015, artículo 2.8.4.4.5 y subsiguientes del Decreto 1068 de 2015 y artículo 3º del Decreto 371 de 2021, la (Dirección General / Dirección Regional / Centro de Formación Profesional Integral) del SENA, requiere contratar los servicios personales para atender la necesidad que a continuación se describe:</p>
+        <p>De conformidad con lo establecido en los numerales 7 y 12 del artículo 25 de la Ley 80 de 1993 y el artículo 20 del Decreto 1510 de 2013 Decreto compilado por el artículo 2.2.1.1.2.1.1 del Decreto 1082 de 2015, así como lo dispuesto en el literal h) del numeral 4 del artículo 2 de la Ley 1150 de 2007, en concordancia con el artículo 2.2.1.2.1.4.9 del Decreto 1082 de 2015, artículo 2.8.4.4.5 y subsiguientes del Decreto 1068 de 2015 y artículo 3º del Decreto 371 de 2021,el Complejo Tecnológico Minero Agroempresarial del SENA, requiere contratar los servicios personales para atender la necesidad que a continuación se describe:</p>
     </div>
     <div id="punto_uno">
         <h3>1.	Justificación de la necesidad de la contratación: </h3>
-        <p>(Se debe indicar de manera detallada las razones de la contratación, exponiendo los fundamentos técnicos y desarrollando los siguientes interrogantes:</p>
         <div class="container">
-            <li>¿Por qué o cómo surge la necesidad?</li>
-            <li>¿Cuál es el objetivo de la contratación?</li>
-            <li>¿Cuánto tiempo se requiere para cubrir la necesidad?</li>
-            <li>¿El plazo del contrato es el estrictamente indispensable?</li>
-            <li>¿Cómo se satisface dicha necesidad con la contratación?</li>
-            <li>¿Cómo contribuye el contrato a los logros del Plan de Acción del SENA y al Plan Nacional de Desarrollo?</li>
-            <li>¿Cuál es la carga laboral del área que solicita el contrato (cuantitativa y cualitativa), así como el número de funcionarios que la apoyan?)</li>
-            <li>¿La actividad a contratar esta por fuera del giro ordinario? ¿El objeto requerido no puede ser suplido con personal de planta? o ¿Hay personal de planta pero este no es suficiente para cubrir las necesidades del servicio?</li>
-            <li>Si el futuro contratista es pensionado, se debe justificar adicionalmente: 1. Un nivel de alta especialización, 2. Unos conocimiento en tecnologías específicas, o 3. Una restricción de la oferta laboral en la región de las calidades requeridas por la entidad.</li>
         </div>
-        <p>Tratándose de actividades en las que prima el intelecto y requiriendo personal con un grado de conocimiento especializado o no existiendo o siendo insuficiente la planta de personal adoptada por el Gobierno Nacional y asignada a la (Dirección / Oficina / Regional / Centro), la alternativa legal con que cuenta la entidad para suplir la necesidad temporal que tiene, es mediante la celebración de un contrato de prestación de servicios personales con una persona natural, que esté en capacidad de ejecutar el objeto del contrato y que demuestre la idoneidad y la experiencia directamente relacionada, conforme a las especificaciones que se indican en este documento, lo anterior conforme al artículo 32 – numeral 3 de la Ley 80 de 1993, que establece: “Son contratos de prestación de servicios los que celebren las entidades estatales para desarrollar actividades relacionadas con la administración o funcionamiento de la entidad. Estos contratos sólo podrán celebrarse con personas naturales cuando dichas actividades no puedan realizarse con personal de planta o requieran conocimiento especializados. // En ningún caso estos contratos generan relación laboral ni prestaciones sociales y se celebrarán por el término estrictamente indispensable”.</p>
+        <p> <%= @previous_study.justificacion_necesidad_contratacion %> </p>
     </div>
     <div id="punto_dos">
         <h3>2. Obligaciones Específicas:</h3>
-        <p>(Describa las obligaciones específicas a ejecutar que NO deben corresponder o ser iguales, a las funciones del manual correspondiente a los servidores de la dependencia. Abstengase de incluir obligaciones que permitan inferir subordinación o dependencia. Se debe destacar un alto grado de autonomía, sin perjuicio de la relación coordinación de actividades para el desarrollo eficiente del objeto contractual. De igual manera, recuerde usar verbos en infinitivo tales como apoyar, realizar, acompañar, gestionar. Tenga en cuenta que los contratistas únicamente pueden prestar apoyo en las supervisiones de contratos cuando el mismo lo establezca)</p>
+        <p> <%= @previous_study.obligaciones %> </p>
     </div>
     <div id="punto_tres">
         <h3>3. Identificación del Contrato a Celebrar:</h3>
@@ -88,7 +79,7 @@
     </div>
     <div id="punto_cinco">
         <h3>5. Domicilio Contractual:</h3>
-        <p>El domicilio contractual será la ciudad de ……... </p>
+        <p> <%= @previous_study.lugar %> </p>
     </div>
     <div id="punto_seis">
         <h3>6. Fundamentos jurídicos que soportan la modalidad de selección:</h3>
@@ -98,7 +89,7 @@
         <h3>7. Justificación valor del contrato:</h3>
         <p>El valor de los honorarios se determina de acuerdo con los criterios de selección objetiva establecidos conforme a la necesidad, al objeto, las obligaciones descritas en este documento, la formación académica y la experiencia exigida para la idónea ejecución del contrato, en concordancia con el Plan de Acción de la Entidad, el presupuesto asignado a la dependencia, el Plan Anual de Adquisiciones y la tabla de honorarios vigente.  
         <br>Para poder adelantar por parte del SENA los trámites administrativos de pago, el contratista debe acreditar previamente el cumplimiento de los requisitos de pago, tales como la certificación expedida por el supervisor del contrato en la que acredite el cumplimiento a entera satisfacción del objeto y obligaciones del contrato en el respectivo periodo y la cancelación de los aportes a la seguridad social como salud, pensión y riesgos laborales y demás documentos necesarios para el pago.  
-        <br> En caso de requerirse el desplazamiento del contratista a otras ciudades o municipios diferentes al domicilio contractual para el cumplimiento del objeto contractual, el SENA pagará los gastos que cause el desplazamiento de conformidad con lo establecido en el acto administrativo vigente.</p>
+        <br> En caso de requerirse el desplazamiento del contratista a otras ciudades o municipios diferentes al domicilio contractual para el cumplimiento del objeto contractual, el SENA pagará los gastos que cause el desplazamiento de conformidad con lo establecido en el acto administrativo vigente.<br> <%= @previous_study.justificacion_valor_contrato %> </p>
     </div>
     <div id="punto_ocho">
         <h3>8. Análisis de riesgos y forma de mitigarlos:</h3>
@@ -110,8 +101,8 @@
     </div>
     <div id="punto_diez">
         <h3>10. Supervisión:</h3>
-        <p>La supervisión del contrato estará a cargo de: (cargo y área) o quien designe el Ordenador del Pago o  Director de Área o Jefe de Oficina.</p>
-        <p>En caso de ausencia parcial o total del supervisor, la misma será asumida por quien ocupe el cargo, sin necesidad de documento adicional alguno. Si no se da la situación anterior, el ordenador del pago (Director(a) de Área, Secretario(a) General, Jefe de Oficina, Director(a) Regional o Subdirector(a) de Centro según el caso) designará nuevo, para lo cual no se requerirá de modificación contractual y la nueva designación se comunicará a las partes mediante el SECOP II.</p>
+        <p>La supervisión del contrato estará a cargo de: la Coordinación académica o quien designe el Subdirector de Centro</p>
+        <p>En caso de ausencia parcial o total del supervisor, la misma será asumida por quien ocupe el cargo, sin necesidad de documento adicional alguno. Si no se da la situación anterior, subdirector de Centro designará nuevo, para lo cual no se requerirá de modificación contractual y la nueva designación se comunicará a las partes mediante el SECOP II.</p>
     </div>
     <div id="punto_once">
         <h3>11. Proceso de contratación cobijado por un acuerdo comercial: SI _____   NO  _X___ </h3>
@@ -129,9 +120,9 @@
     </div>
     <div id="punto_catorce_uno">
         <h3>14.1 Idoneidad y experiencia.</h3>
-        <p>De acuerdo con los soportes de idoneidad y experiencia allegados por el (la) señor (a) ________________________, se procede al análisis y verificación de los documentos y en consecuencia se certifica lo siguiente:</p>
+        <p>Se anexa certificado de idoneidad.</p>
     </div>
-    <div id="tabla_idoneidad">
+   <!-- <div id="tabla_idoneidad">
         <table align="center">
             <tr>
                 <th colspan="3">IDONEIDAD</th>
@@ -149,8 +140,8 @@
                 <td></td>
             </tr>
         </table>
-    </div>
-    <div id="tabla_experiencia">
+   </div> -->
+   <!-- <div id="tabla_experiencia">
         <table align="center">
             <tr>
                 <th colspan="5">EXPERIENCIA</th>
@@ -227,15 +218,16 @@
                 <td></td>
             </tr>
         </table>
-    </div>
+        </div> -->
     <div id="punto_catorce_dos">
         <h3>14.2  Estudio de la Oferta.</h3>
         <p>La Corte Constitucional, en Sentencia C-614 del 2009, señaló que el ejercicio de funciones permanentes en la Administración Pública debe hacerse con personal de planta y que todo vínculo contractual para el desempeño de funciones permanentes y propias del objeto de la entidad contratante debe ser retirado de la dinámica laboral administrativa, debido a que desdibuja el concepto de contrato estatal, vulnera derechos laborales y el artículo 125 de la Constitución Política que exige el mérito para el ingreso y permanencia al empleo público.<br>
-            El uso de la modalidad del contrato de prestación de servicios resulta adecuado si se celebra en total observancia a la normativa que la regula, en el marco de la jurisprudencia de las Altas Cortes, pero también es cierto que, a pesar de las múltiples medidas adoptadas en materia de gestión y normativas, persiste el uso de esta modalidad para cumplir funciones de carácter permanente.<br>
-            Es por ello que en el mercado colombiano existen múltiples profesionales y expertos en diferentes materias que prestan sus servicios a diversas entidades y cuyo objeto y obligaciones son similares a las que aquí se pretende contratar.<br>
-            De acuerdo con el concepto emitido por la Dirección Jurídica No. 8-2015-027166 de 2015, el SENA está facultado constitucional y legalmente para vincular mediante contrato de prestación de servicios a pensionados, para el desarrollo de proyectos institucionales en cumplimiento de las funciones que le son propias, ajustado a lo expuesto en la Ley 80 de 1993, pues comparte plenamente la argumentación jurídica expresada en los pronunciamientos jurisprudenciales en la cual se podrá adelantar procesos de contratación con personas naturales que hayan adquirido su derecho a pensión y cuando confluyan alguno de los siguiente tres elementos: 1. Un nivel de alta especialización, 2. Unos conocimiento en tecnologías específicas, o 3. Una restricción de la oferta laboral en la región de las calidades requeridas por la entidad. Nota: TEXTO RESALTADO DEBE SER INCLUIDO EN CASO DE CELEBRAR CONTRATO CON PENSIONADO, JUSTIFICANDO LA CAUSAL ESPECÍFICA.<br> 
-            Sin embargo, una vez analizada la hoja de vida del futuro contratista, frente al objeto contractual, las obligaciones y la necesidad que se pretende satisfacer, el (Director(a) de Área, Secretario(a) General, Jefe de Oficina, Director(a) Regional o Subdirector(a) de Centro según el caso) establece que el futuro contratista cumple con los requisitos señalados anteriormente.<br>
-            </p>
+El uso de la modalidad del contrato de prestación de servicios resulta adecuado si se celebra en total observancia a la normativa que la regula, en el marco de la jurisprudencia de las Altas Cortes, pero también es cierto que, a pesar de las múltiples medidas adoptadas en materia de gestión y normativas, persiste el uso de esta modalidad para cumplir funciones de carácter permanente.<br>
+Es por ello que en el mercado colombiano existen múltiples profesionales y expertos en diferentes materias que prestan sus servicios a diversas entidades y cuyo objeto y obligaciones son similares a las que aquí se pretende contratar.<br>
+Sin embargo, una vez analizada la hoja de vida del futuro contratista, frente al objeto contractual,
+las obligaciones y la necesidad que se pretende satisfacer, el Subdirector de centro, establece que
+el futuro contratista cumple con los requisitos señalados anteriormente.<br>
+        </p>
     </div>
     <div id="punto_catorce_tres">
         <h3>14.3  Estudio de la Demanda.</h3>
@@ -273,18 +265,19 @@
             </tr>
         </table>
     </div>
-    <div id="punto_quince">
+   <!-- <div id="punto_quince">
         <h3>15. Recomendación al Ordenador del Gasto:</h3>
         <p>Que revisada y validada la documentación presentada por el futuro contratista en el SIGEP y verificado el cumplimiento de los requisitos de capacidad, idoneidad y/o experiencia requerida para la prestación del servicio y el cubrimiento de la necesidad reportada, se recomienda la contratación al ordenador (a) del gasto, sin que sea necesario haber obtenido previamente varias ofertas, así mismo se verificó el cumplimiento de los topes, alternativas o exoneraciones establecidas en la tabla de honorarios vigente. (Nota: este punto solo aplica para contratos cuyas actividades sean diferentes a instructor)</p>
         <p>Se expide en la ciudad de __________.</p>
-    </div>
+        </div> -->
     <div id="pie_pagina">
-        <h2>(Nombre del Director de Área, Secretario(a) General, Jefe de Oficina, Director Regional y/o Subdirector de Centro)<br>(Cargo)</h2>
+        <h2>Fernando Cano Gómez <br> Subdirector de Centro</h2>
     </div>
     <div id="texto_final">
         <p>Proyectó: (nombre en calibri 8) Cargo: (nombre del cargo - Dependencia o Grupo)<br>
             Revisó: (nombre en calibri 8) Cargo: (nombre del cargo - Dependencia o Grupo) 	
         </p>
     </div>
+</div>
 </body>
 </html>

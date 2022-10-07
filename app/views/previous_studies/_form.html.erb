@@ -17,13 +17,13 @@
   </div>
 
   <div class="my-5">
-    <%= form.label :educacion %>
+    <%= form.label :educacion_y_o_formacion %>
     <%= form.text_area :educacion, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
-    <%= form.label :experiencia %>
-    <%= form.text_field :experiencia, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.label :experiencia_relacionada %>
+    <%= form.text_area :experiencia, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
@@ -33,17 +33,17 @@
 
   <div class="my-5">
     <%= form.label :plazo %>
-    <%= form.text_field :plazo, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.text_area :plazo, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
     <%= form.label :lugar %>
-    <%= form.text_field :lugar, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.text_area :lugar, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
     <%= form.label :supervisor %>
-    <%= form.text_field :supervisor, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.text_area :supervisor, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
@@ -57,12 +57,12 @@
   </div>
 
   <div class="my-5">
-    <%= form.label :justificacion_necesidad_contratacion %>
+    <%= form.label :"1. justificacion necesidad contratacion" %>
     <%= form.rich_text_area :justificacion_necesidad_contratacion, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
-    <%= form.label :obligaciones %>
+    <%= form.label :"2. obligaciones" %>
     <%= form.rich_text_area :obligaciones, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
@@ -92,22 +92,22 @@
   </div>
 
   <div class="my-5">
-    <%= form.label :domicilio_contractual %>
+    <%= form.label :"5. domicilio_contractual" %>
     <%= form.text_field :domicilio_contractual, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
-    <%= form.label :justificacion_valor_contrato %>
+    <%= form.label :"7. justificacion_valor_contrato" %>
     <%= form.text_area :justificacion_valor_contrato, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
-    <%= form.label :contratacion_acuerdo_comercial %>
+    <%= form.label :"Proceso de contratacion cobijado por un acuerdo comercial" %>
     <%= form.check_box :contratacion_acuerdo_comercial, class: "block mt-2 h-5 w-5" %>
   </div>
 
   <div class="my-5">
-    <%= form.label :contratacion_plan_adquisiciones %>
+    <%= form.label :"Proceso de contratacion incluido en el plan de adquisiciones" %>
     <%= form.check_box :contratacion_plan_adquisiciones, class: "block mt-2 h-5 w-5" %>
   </div>
 
