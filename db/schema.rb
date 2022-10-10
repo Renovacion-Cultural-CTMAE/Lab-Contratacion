@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_03_152530) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_10_140826) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -117,6 +117,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_03_152530) do
     t.index ["contract_id"], name: "index_contract_supervisors_on_contract_id"
   end
 
+  create_table "contracting_authorizations", force: :cascade do |t|
+    t.text "cdp"
+    t.text "rubro"
+    t.text "radicado_nis"
+    t.bigint "previous_study_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["previous_study_id"], name: "index_contracting_authorizations_on_previous_study_id"
+  end
+
   create_table "contractor_professions", force: :cascade do |t|
     t.integer "cedula_contratista"
     t.string "codigo_profesion"
@@ -195,6 +205,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_03_152530) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["contractor_id"], name: "index_healths_on_contractor_id"
+  end
+
+  create_table "memorandum_contractings", force: :cascade do |t|
+    t.string "tipo_formacion"
+    t.string "cdp"
+    t.bigint "previous_study_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["previous_study_id"], name: "index_memorandum_contractings_on_previous_study_id"
   end
 
   create_table "payments", force: :cascade do |t|
@@ -296,4 +315,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_03_152530) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "contracting_authorizations", "previous_studies"
+  add_foreign_key "memorandum_contractings", "previous_studies"
 end

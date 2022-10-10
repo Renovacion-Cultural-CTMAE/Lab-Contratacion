@@ -1,0 +1,22 @@
+<div id="<%= dom_id memorandum_contracting %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Tipo formacion:</strong>
+    <%= memorandum_contracting.tipo_formacion %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Cdp:</strong>
+    <%= memorandum_contracting.cdp %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Previous studies:</strong>
+    <%= memorandum_contracting.previous_studies_id %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this memorandum contracting", memorandum_contracting, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this memorandum contracting', edit_memorandum_contracting_path(memorandum_contracting), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
