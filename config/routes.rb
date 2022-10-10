@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :personal_inexistences
+  resources :equal_objects
+  resources :contracting_authorizations
+  resources :memorandum_contractings
   resources :previous_studies
   get 'previous_studies/report'
   get 'search', to: 'search#index'

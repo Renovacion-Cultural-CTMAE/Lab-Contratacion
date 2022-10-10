@@ -1,0 +1,2 @@
+module EqualObjectsHelper
+end

@@ -1,0 +1,2 @@
+module MemorandumContractingsHelper
+end

@@ -1,0 +1,22 @@
+<div id="<%= dom_id contracting_authorization %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Cdp:</strong>
+    <%= contracting_authorization.cdp %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Rubro:</strong>
+    <%= contracting_authorization.rubro %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Radicado nis:</strong>
+    <%= contracting_authorization.radicado_nis %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this contracting authorization", contracting_authorization, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this contracting authorization', edit_contracting_authorization_path(contracting_authorization), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

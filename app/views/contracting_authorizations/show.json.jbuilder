@@ -1,0 +1,1 @@
+json.partial! "contracting_authorizations/contracting_authorization", contracting_authorization: @contracting_authorization
