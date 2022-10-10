@@ -1,1 +1,0 @@
-json.partial! "curriculum_design_profiles/curriculum_design_profile", curriculum_design_profile: @curriculum_design_profile

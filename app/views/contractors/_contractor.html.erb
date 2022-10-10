@@ -1,67 +1,47 @@
 <div id="<%= dom_id contractor %>">
   <p class="my-5">
-    <strong class="block font-medium mb-1">Nombre:</strong>
-    <%= contractor.nombre %>
+    <strong class="block font-medium mb-1">No año:</strong>
+    <%= contractor.no_año %>
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Apellido:</strong>
-    <%= contractor.apellido %>
+    <strong class="block font-medium mb-1">Nombre contratista:</strong>
+    <%= contractor.nombre_contratista %>
   </p>
 
   <p class="my-5">
     <strong class="block font-medium mb-1">Cedula contratista:</strong>
-    <%= contractor.id %>
+    <%= contractor.cedula_contratista %>
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Lugar expedicion cedula:</strong>
-    <%= contractor.lugar_expedicion_cedula %>
+    <strong class="block font-medium mb-1">Objeto contrato:</strong>
+    <%= contractor.objeto_contrato %>
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Fecha expedicion cedula:</strong>
-    <%= contractor.fecha_expedicion_cedula %>
+    <strong class="block font-medium mb-1">Plazo:</strong>
+    <%= contractor.plazo %>
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Edad:</strong>
-    <%= contractor.edad %>
+    <strong class="block font-medium mb-1">Valor forma pago:</strong>
+    <%= contractor.valor_forma_pago %>
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Fecha de nacimiento:</strong>
-    <%= contractor.fecha_de_nacimiento %>
+    <strong class="block font-medium mb-1">Modalidad seleccion:</strong>
+    <%= contractor.modalidad_seleccion %>
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Municipio de recidencia:</strong>
-    <%= contractor.municipio_de_recidencia %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Sexo:</strong>
-    <%= contractor.sexo %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Numero de libreta militar:</strong>
-    <%= contractor.numero_de_libreta_militar %>
+    <strong class="block font-medium mb-1">Previous study:</strong>
+    <%= contractor.previous_study_id %>
   </p>
 
   <% if action_name != "show" %>
-  <%= link_to contractor, class: "relative inline-block text-sm font-medium text-white group focus:outline-none focus:ring" do %>
-  <span class="absolute inset-0 border border-naranja group-active:border-naranja"></span>
-  <span
-    class="block px-12 py-3 transition-transform bg-naranja border border-naranja active:border-naranja active:bg-red-500 group-hover:-translate-x-1 group-hover:-translate-y-1">Mostrar
-    este contratista
-    <% end %>
-    <%= link_to edit_contractor_path(contractor), class: "relative inline-block text-sm font-medium text-white group focus:outline-none focus:ring" do %>
-    <span class="absolute inset-0 border border-naranja group-active:border-naranja"></span>
-    <span
-      class="block px-12 py-3 transition-transform bg-naranja border border-naranja active:border-naranja active:bg-red-500 group-hover:-translate-x-1 group-hover:-translate-y-1">Editar
-      los datos de este contratista
-      <% end %>
-      <hr class="mt-6">
-      <% end %>
+    <%= link_to "Show this contractor", contractor, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this contractor', edit_contractor_path(contractor), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
 </div>

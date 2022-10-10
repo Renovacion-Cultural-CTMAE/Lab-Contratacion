@@ -14,16 +14,14 @@ class ContractorsTest < ApplicationSystemTestCase
     visit contractors_url
     click_on "New contractor"
 
-    fill_in "Apellido", with: @contractor.apellido
     fill_in "Cedula contratista", with: @contractor.cedula_contratista
-    fill_in "Edad", with: @contractor.edad
-    fill_in "Fecha de nacimiento", with: @contractor.fecha_de_nacimiento
-    fill_in "Fecha expedicion cedula", with: @contractor.fecha_expedicion_cedula
-    fill_in "Lugar expedicion cedula", with: @contractor.lugar_expedicion_cedula
-    fill_in "Municipio de recidencia", with: @contractor.municipio_de_recidencia
-    fill_in "Nombre", with: @contractor.nombre
-    fill_in "Numero de libreta militar", with: @contractor.numero_de_libreta_militar
-    fill_in "Sexo", with: @contractor.sexo
+    fill_in "Modalidad seleccion", with: @contractor.modalidad_seleccion
+    fill_in "No año", with: @contractor.no_año
+    fill_in "Nombre contratista", with: @contractor.nombre_contratista
+    fill_in "Objeto contrato", with: @contractor.objeto_contrato
+    fill_in "Plazo", with: @contractor.plazo
+    fill_in "Previous study", with: @contractor.previous_study_id
+    fill_in "Valor forma pago", with: @contractor.valor_forma_pago
     click_on "Create Contractor"
 
     assert_text "Contractor was successfully created"
@@ -34,16 +32,14 @@ class ContractorsTest < ApplicationSystemTestCase
     visit contractor_url(@contractor)
     click_on "Edit this contractor", match: :first
 
-    fill_in "Apellido", with: @contractor.apellido
     fill_in "Cedula contratista", with: @contractor.cedula_contratista
-    fill_in "Edad", with: @contractor.edad
-    fill_in "Fecha de nacimiento", with: @contractor.fecha_de_nacimiento
-    fill_in "Fecha expedicion cedula", with: @contractor.fecha_expedicion_cedula
-    fill_in "Lugar expedicion cedula", with: @contractor.lugar_expedicion_cedula
-    fill_in "Municipio de recidencia", with: @contractor.municipio_de_recidencia
-    fill_in "Nombre", with: @contractor.nombre
-    fill_in "Numero de libreta militar", with: @contractor.numero_de_libreta_militar
-    fill_in "Sexo", with: @contractor.sexo
+    fill_in "Modalidad seleccion", with: @contractor.modalidad_seleccion
+    fill_in "No año", with: @contractor.no_año
+    fill_in "Nombre contratista", with: @contractor.nombre_contratista
+    fill_in "Objeto contrato", with: @contractor.objeto_contrato
+    fill_in "Plazo", with: @contractor.plazo
+    fill_in "Previous study", with: @contractor.previous_study_id
+    fill_in "Valor forma pago", with: @contractor.valor_forma_pago
     click_on "Update Contractor"
 
     assert_text "Contractor was successfully updated"

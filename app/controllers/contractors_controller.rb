@@ -1,12 +1,9 @@
 class ContractorsController < ApplicationController
   before_action :set_contractor, only: %i[ show edit update destroy ]
-  before_action :authenticate_user!
 
   # GET /contractors or /contractors.json
   def index
-    @q = Contractor.ransack(params[:q])
-    # @contractors = Contractor.all
-    @contractors = @q.result
+    @contractors = Contractor.all
   end
 
   # GET /contractors/1 or /contractors/1.json
@@ -68,6 +65,6 @@ class ContractorsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def contractor_params
-      params.require(:contractor).permit(:nombre, :apellido, :id, :lugar_expedicion_cedula, :fecha_expedicion_cedula, :edad, :fecha_de_nacimiento, :municipio_de_recidencia, :sexo, :numero_de_libreta_militar)
+      params.require(:contractor).permit(:no_año, :nombre_contratista, :cedula_contratista, :objeto_contrato, :plazo, :valor_forma_pago, :modalidad_seleccion, :previous_study_id)
     end
 end

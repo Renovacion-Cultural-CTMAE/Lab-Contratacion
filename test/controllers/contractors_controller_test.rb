@@ -17,7 +17,7 @@ class ContractorsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create contractor" do
     assert_difference("Contractor.count") do
-      post contractors_url, params: { contractor: { apellido: @contractor.apellido, cedula_contratista: @contractor.cedula_contratista, edad: @contractor.edad, fecha_de_nacimiento: @contractor.fecha_de_nacimiento, fecha_expedicion_cedula: @contractor.fecha_expedicion_cedula, lugar_expedicion_cedula: @contractor.lugar_expedicion_cedula, municipio_de_recidencia: @contractor.municipio_de_recidencia, nombre: @contractor.nombre, numero_de_libreta_militar: @contractor.numero_de_libreta_militar, sexo: @contractor.sexo } }
+      post contractors_url, params: { contractor: { cedula_contratista: @contractor.cedula_contratista, modalidad_seleccion: @contractor.modalidad_seleccion, no_año: @contractor.no_año, nombre_contratista: @contractor.nombre_contratista, objeto_contrato: @contractor.objeto_contrato, plazo: @contractor.plazo, previous_study_id: @contractor.previous_study_id, valor_forma_pago: @contractor.valor_forma_pago } }
     end
 
     assert_redirected_to contractor_url(Contractor.last)
@@ -34,7 +34,7 @@ class ContractorsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update contractor" do
-    patch contractor_url(@contractor), params: { contractor: { apellido: @contractor.apellido, cedula_contratista: @contractor.cedula_contratista, edad: @contractor.edad, fecha_de_nacimiento: @contractor.fecha_de_nacimiento, fecha_expedicion_cedula: @contractor.fecha_expedicion_cedula, lugar_expedicion_cedula: @contractor.lugar_expedicion_cedula, municipio_de_recidencia: @contractor.municipio_de_recidencia, nombre: @contractor.nombre, numero_de_libreta_militar: @contractor.numero_de_libreta_militar, sexo: @contractor.sexo } }
+    patch contractor_url(@contractor), params: { contractor: { cedula_contratista: @contractor.cedula_contratista, modalidad_seleccion: @contractor.modalidad_seleccion, no_año: @contractor.no_año, nombre_contratista: @contractor.nombre_contratista, objeto_contrato: @contractor.objeto_contrato, plazo: @contractor.plazo, previous_study_id: @contractor.previous_study_id, valor_forma_pago: @contractor.valor_forma_pago } }
     assert_redirected_to contractor_url(@contractor)
   end
 

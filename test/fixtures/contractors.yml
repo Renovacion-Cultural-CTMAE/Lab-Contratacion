@@ -1,25 +1,21 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  nombre: MyString
-  apellido: MyString
+  no_año: MyString
+  nombre_contratista: MyString
   cedula_contratista: 1
-  lugar_expedicion_cedula: MyString
-  fecha_expedicion_cedula: MyString
-  edad: 1
-  fecha_de_nacimiento: MyString
-  municipio_de_recidencia: MyString
-  sexo: MyString
-  numero_de_libreta_militar: 1
+  objeto_contrato: MyText
+  plazo: MyString
+  valor_forma_pago: MyText
+  modalidad_seleccion: MyString
+  previous_study: one
 
 two:
-  nombre: MyString
-  apellido: MyString
+  no_año: MyString
+  nombre_contratista: MyString
   cedula_contratista: 1
-  lugar_expedicion_cedula: MyString
-  fecha_expedicion_cedula: MyString
-  edad: 1
-  fecha_de_nacimiento: MyString
-  municipio_de_recidencia: MyString
-  sexo: MyString
-  numero_de_libreta_militar: 1
+  objeto_contrato: MyText
+  plazo: MyString
+  valor_forma_pago: MyText
+  modalidad_seleccion: MyString
+  previous_study: two
