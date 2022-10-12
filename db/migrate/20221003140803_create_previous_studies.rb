@@ -15,6 +15,7 @@ class CreatePreviousStudies < ActiveRecord::Migration[7.0]
       t.text :programa
       t.string :nivel
       t.text :perfil
+      t.text :experiencia_t
       t.integer :numero_contratos
       t.float :valor_mes
       t.float :valor_total_contrato
@@ -22,6 +23,11 @@ class CreatePreviousStudies < ActiveRecord::Migration[7.0]
       t.text :justificacion_valor_contrato
       t.boolean :contratacion_acuerdo_comercial
       t.boolean :contratacion_plan_adquisiciones
+      t.string :numero_contratos_escrito
+      t.string :proyecto
+      t.string :cargo_proyecto
+      t.string :reviso
+      t.string :cargo_reviso
 
       t.timestamps
     end

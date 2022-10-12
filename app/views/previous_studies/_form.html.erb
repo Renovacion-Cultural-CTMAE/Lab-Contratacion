@@ -72,13 +72,27 @@
   </div>
 
   <div class="my-5">
+    <%= form.label :Programa %>
+    <%= form.text_field :programa, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
     <%= form.label :perfil %>
     <%= form.text_area :perfil, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
+    <%= form.label :Experiencia %>
+    <%= form.text_field :experiencia_t, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
     <%= form.label :numero_contratos %>
     <%= form.number_field :numero_contratos, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div> 
+  <div class="my-5">
+    <%= form.label :"numero contratos (Escritos)" %>
+    <%= form.number_field :numero_contratos_escrito, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
@@ -100,6 +114,27 @@
     <%= form.label :"7. justificacion_valor_contrato" %>
     <%= form.text_area :justificacion_valor_contrato, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
+
+  <div class="my-5">
+    <%= form.label :"Proyecto" %>
+    <%= form.text_area :proyecto, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :"Cargo de la persona que proyecto" %>
+    <%= form.text_area :cargo_proyecto, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :"reviso" %>
+    <%= form.text_area :reviso, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :"Cargo de la persona que reviso" %>
+    <%= form.text_area :cargo_reviso, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
 
   <div class="my-5">
     <%= form.label :"Proceso de contratacion cobijado por un acuerdo comercial" %>
