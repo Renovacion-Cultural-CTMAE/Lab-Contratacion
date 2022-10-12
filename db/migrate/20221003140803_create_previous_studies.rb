@@ -12,6 +12,7 @@ class CreatePreviousStudies < ActiveRecord::Migration[7.0]
       t.string :nombre_centro
       t.text :justificacion_necesidad_contratacion
       t.text :obligaciones
+      t.text :programa
       t.string :nivel
       t.text :perfil
       t.integer :numero_contratos

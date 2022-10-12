@@ -1,0 +1,44 @@
+body{
+    padding-top: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#logo_sena{
+    text-align: center;
+}
+
+h2, h3, th{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+p{
+    text-align: justify;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th{
+    text-align: left;
+}
+
+td, th{
+    padding: 10px;
+    text-align: justify;
+}
+
+table{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+#reviso{
+    font-size: small;
+}

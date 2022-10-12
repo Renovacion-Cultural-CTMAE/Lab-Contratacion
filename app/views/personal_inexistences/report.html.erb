@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <%= wicked_pdf_stylesheet_link_tag "inexistencia" -%>
+    <%= wicked_pdf_javascript_include_tag "number_pages" %>
+  </head>
+  <body onload='number_pages'>
+    <!--<div id="header">
+      <% # = wicked_pdf_image_tag 'mysite.jpg' %>
+    </div> -->
+    <div id="content">
+       <div id="titulo">
+        <h2>CERTIFICACIÓN DE INEXISTENCIA DE PERSONAL DE PLANTA<br>EL DIRECTOR REGIONAL DEL SENA</h2>
+    </div>
+    <div id="subtitulo">
+        <h2>CONSIDERANDO</h2>
+    </div>
+    <div id="texto">
+        <p>Que el Complejo Tecnológico Minero Agroempresarial requiere contratar los servicios profesionales y/o de apoyo a la gestión para ejecutar el objeto y las obligaciones descritas en el estudio previo que soportará la futura contratación.</p>
+        <p>Que en cumplimiento de lo establecido en el artículo 3 del Decreto 1737 de 1998, modificado por el Artículo 1º del Decreto 2209 de 1998, articulo 2.8.4.4.5 del Decreto 1068 de 2015 y la Resolución No. 054 de 2018;</p>
+        <p>Por lo anterior:</p>
+    </div>
+    <div id="subtitulo2">
+        <h3>CERTIFICA</h3>
+    </div>
+    <div id="texto2">
+      <p>Que revisada la planta de personal del Complejo Tecnológico Minero Agroempresarial, lo indicado en las anteriores consideraciones y la justificación realizada por el área o dependencia en el estudio previo, en virtud del artículo 2.8.4.4.5 del Decreto 1068 de 2015, este Despacho Regional acredita la inexistencia de personal suficiente para ejecutar las obligaciones y el objeto contractual consistente en:<%= @personal_inexistence.previous_study.objeto %>.</p>
+        <p>Por tanto, se presenta una de las causales establecidas en la normatividad vigente, que implica la contratación directa del servicio.</p>
+        <p>Que la expedición de la presente certificación no exime de cumplimiento y aplicación de las normas de contratación que regulan la materia.</p>
+        <p>Dada en Medellín, a los</p>
+      </div>
+      <div id="subtitulo3"> 
+          <h3>Juan Felipe Rendon Ochoa</h3> 
+      </div>
+      <div id="texto3">
+          <p>VoBo. Diana Patricia Rache Amaya<br>Coordinación del Grupo de apoyo Administrativo Mixto</p>
+          <p>Proyectó: Juan Carlos Osorio Gómez – Coordinador Administrativo</p>
+          <p>Revisó: Fernando Cano Gómez – subdirector de Centro</p>
+          <p>Anexo: Estudio Previo y Análisis del Sector</p>
+      </div>
+    </div>
+  </body>
+</html>

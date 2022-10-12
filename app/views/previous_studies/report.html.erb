@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reporte</title>
-    <%= wicked_pdf_stylesheet_link_tag "pdf" -%>
+    <%= wicked_pdf_stylesheet_link_tag "estudio_previo" -%>
 </head>
 <body>
     <div id="logo_sena">
@@ -74,6 +74,53 @@
     <div id="punto_cuatro">
         <h3>4. Competencias Técnicas y Personales:</h3>
         <p>La persona natural deberá ejecutar el objeto del contrato a partir de los conocimientos y experiencia relacionada descritos en el presente estudio previo, además de contar con buenas relaciones interpersonales con clientes internos y/o externos, uso eficaz de las tecnologías de la información y de la comunicación, capacidad de trabajo en equipo y liderazgo.</p>
+    </div>
+    <div id="tabla_programas_formacion">
+        <table align="center">
+            <tr>
+                <th colspan="8">PROGRAMAS FORMACIÓN INFORMACIÓN Y COMUNICACIONES</th>
+            </tr>
+            <tr>
+                <th colspan="8">Áreas Técnicas</th>
+            </tr>
+            <tr>
+                <th>Objeto</th>
+                <th>Nivel</th>
+                <th>Programa</th>
+                <th>Perfil</th>
+                <th>Experiencia</th>
+                <th>Contratos</th>
+                <th>Valor mes</th>
+                <th>Valor total contrato</th>
+            </tr>
+            <tr>
+                <td><%= @previous_study.objeto %></td>
+                <td><%= @previous_study.nivel %></td>
+                <td><%= @previous_study.programa %></td>
+                <td><%= @previous_study.perfil %></td>
+                <td><%= @previous_study.experiencia %></td>
+                <td><%= @previous_study.numero_contratos%></td>
+                <td><%= @previous_study.valor_mes %></td>
+                <td><%= @previous_study.valor_total_contrato %></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="4">TOTAL</td>
+                <td><%= @previous_study.numero_contratos %></td>
+                <td></td>
+                <td><%= @previous_study.valor_total_contrato%></td>
+            </tr>
+        </table>
     </div>
     <div id="punto_cinco">
         <h3>5. Domicilio Contractual:</h3>

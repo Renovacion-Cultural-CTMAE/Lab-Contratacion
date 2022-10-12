@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <%= wicked_pdf_stylesheet_link_tag "autorizacion" -%>
+    <%= wicked_pdf_javascript_include_tag "number_pages" %>
+  </head>
+  <body onload='number_pages'>
+    <!-- <div id="header">
+      <% # wicked_pdf_image_tag 'mysite.jpg' %>
+    </div> -->
+    <div id="content">
+      <h2>AUTORIZACION DE CONTRATACION<br>DIRECCION REGIONAL ANTIOQUIA</h2>
+    <h3>CONSIDERANDO</h3>
+    <div>
+        <p>Que el Complejo Tecnológico Minero Agroempresarial de la Regional Antioquia, requiere contratar la prestación de servicios profesionales y técnicos de carácter temporal, de Tres (3) instructores.</p>
+        <p>Que de acuerdo con certificación expedida por el subdirector del Centro, en la planta de personal no existe personal suficiente y teniendo en cuenta las especiales características y necesidades técnicas de la contratación, se requiere contratar la prestación de este servicio.</p>
+        <p>Que el Centro de Formación debe velar por el cumplimiento de los requisitos legales de acuerdo con la normatividad vigente y aplicable en concordancia con el manual de contratación vigente.</p>
+        <p>Que, en virtud de lo anterior:</p>
+    </div>
+        <h3>AUTORIZA LA CONTRATACION</h3>
+    <table>
+        <tr>
+            <th>Descripción breve de la solicitud:</th>
+            <td><%= @contracting_authorization.previous_study.objeto %></td>
+        </tr>
+        <tr>
+            <th>Cantidad de contratos:</th>
+            <td><%= @contracting_authorization.previous_study.numero_contratos %></td>
+        </tr>
+        <tr>
+            <th>Valor total de la contratación:</th>
+            <td><%= @contracting_authorization.previous_study.valor_forma_pago %></td>
+        </tr>
+        <tr>
+            <th>CDP:</th>
+            <td><%= @contracting_authorization.cdp%></td>
+        </tr>
+        <tr>
+            <th>Rubro:</th>
+            <td><%= @contracting_authorization.rubro %></td>
+        </tr>
+        <tr>
+            <th>Radicado - NIS</th>
+            <td><%= @contracting_authorization.radicado_nis %></td>
+        </tr>
+    </table>
+    <h3 id="nombre_director">_________________________________________________<br>JUAN FELIPE RENDON OCHOA<br>DIRECTOR REGIONAL</h3>
+    <p id="reviso">Proyectó: Aida Irene Tangarife Hernandez – Coordinadora de Formación<br>
+        Revisó: Fernando Cano Gómez – subdirector de Centro</p>
+    </div>
+  </body>
+</html>

@@ -8,6 +8,13 @@ class PersonalInexistencesController < ApplicationController
 
   # GET /personal_inexistences/1 or /personal_inexistences/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "Certificado inexistencia personal", template: 'personal_inexistences/report', formats:[:html],
+          header: {html: {template: 'personal_inexistences/header', formats:[:html]}}
+      end
+      end
   end
 
   # GET /personal_inexistences/new

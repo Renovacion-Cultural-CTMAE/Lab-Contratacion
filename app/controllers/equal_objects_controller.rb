@@ -8,6 +8,13 @@ class EqualObjectsController < ApplicationController
 
   # GET /equal_objects/1 or /equal_objects/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "Certificado objetos iguales", template: 'equal_objects/report', formats:[:html],
+          header:{ html: { template: 'equal_objects/header', formats:[:html]}}
+      end
+      end
   end
 
   # GET /equal_objects/new

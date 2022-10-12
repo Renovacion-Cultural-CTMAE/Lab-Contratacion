@@ -8,6 +8,13 @@ class ContractingAuthorizationsController < ApplicationController
 
   # GET /contracting_authorizations/1 or /contracting_authorizations/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "Autorizacion_contratacion", template: 'contracting_authorizations/report', formats:[:html],
+          header: { html: { template: 'contracting_authorizations/header', formats:[:html]}}
+      end
+    end
   end
 
   # GET /contracting_authorizations/new
@@ -65,6 +72,6 @@ class ContractingAuthorizationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def contracting_authorization_params
-      params.require(:contracting_authorization).permit(:cdp, :rubro, :radicado_nis)
+      params.require(:contracting_authorization).permit(:cdp, :rubro, :radicado_nis, :previous_study_id)
     end
 end

@@ -10,6 +10,7 @@
     <div class="inline-block ml-2">
       <%= button_to 'Destroy this equal_object', equal_object_path(@equal_object), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
     </div>
+    <%= link_to 'Generar reporte', "/equal_objects/#{@equal_object.id}.pdf", class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <%= link_to 'Back to equal_objects', equal_objects_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
   </div>
 </div>

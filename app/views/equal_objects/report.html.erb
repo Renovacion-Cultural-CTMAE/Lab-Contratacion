@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <%= wicked_pdf_stylesheet_link_tag "objetos_iguales" -%>
+    <%= wicked_pdf_javascript_include_tag "number_pages" %>
+  </head>
+  <body onload='number_pages'>
+    <div id="header">
+      <%= wicked_pdf_image_tag 'mysite.jpg' %>
+    </div>
+    <div id="content">
+       <h2>AUTORIZACIÓN PARA LA CONTRATACIÓN DE OBJETOS IGUALES<br>DIRECTOR REGIONAL ANTIOQUIA</h2>
+    <div>
+        <h3>CONSIDERANDO</h3>
+        <p>Que el subdirector del Complejo Tecnológico Minero Agroempresarial del SENA, según estudios previos, solicita autorización para contratar en la vigencia 2022, <%= @equal_object.previous_study.numero_contratos %> instructores con el siguiente objeto igual:<%= @equal_object.previous_study.objeto %>.</p>
+        <p>Que el trámite se adelanta de conformidad con lo establecido en el numeral 3 del artículo 32 de la Ley 80 de 1993, el literal h) del numeral 4 del artículo 2° de la Ley 1150 de 2007, el artículo 2.2.1.2.1.4.9. del Decreto 1082 de 2015, el artículo 3º del Decreto 1737 de 1998, modificado por el artículo 1° del Decreto 2209 de 1998, y el Decreto 1068 de 2015 artículo 2.8.4.4.5; en concordancia con la Resolución No. 751 de 2014, la Resolución No. 0054 de 2018 y la Circular SENA No. 3-2014-000115 de 2014</p>
+        <p>Que teniendo en cuenta la justificación expuesta por el subdirector del Complejo Tecnológico Minero Agroempresarial, Fernando Cano Gómez en los estudios previos, las especiales características y necesidades técnicas de las contrataciones a realizar, la asignación presupuestal de la Dirección de Planeación y el aval de la Dirección Regional Antioquia del SENA; resulta procedente otorgar la autorización solicitada.</p>
+        <p>En consecuencia, la Dirección Regional Antioquia</p>
+    </div>
+    <div>
+        <h3>AUTORIZA</h3>
+        <p>A el subdirector del Complejo Tecnológico Minero Agroempresarial Fernando Cano Gómez, a contratar en la vigencia 2022 los servicios de <%= @equal_object.previous_study.numero_contratos %> instructores con el siguiente objeto <%= @equal_object.previous_study.objeto %></p>
+    </div>
+    <h2>JUAN FELIPE RENDON OCHOA</h2>
+    <h3>Director Regional Antioquia</h3>
+    <h6>VoBo. Fernando Cano Gómez. Subdirector.<br>Revisó: Wilfer Alberto Lopez Madrid, Coordinador Académico<br>Proyectó: Aida Irene Tangarife H. Coordinadora de Formación.</h6>
+    </div>
+  </body>
+</html>
