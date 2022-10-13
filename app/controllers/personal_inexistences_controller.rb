@@ -73,6 +73,6 @@ class PersonalInexistencesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def personal_inexistence_params
-      params.require(:personal_inexistence).permit(:previous_study_id)
+      params.require(:personal_inexistence).permit(:previous_study_id, :proyecto, :reviso, :vob, :nombre_director_general)
     end
 end

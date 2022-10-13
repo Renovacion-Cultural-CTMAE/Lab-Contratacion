@@ -56,6 +56,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_10_221214) do
     t.text "cdp"
     t.text "rubro"
     t.text "radicado_nis"
+    t.string "proyecto"
+    t.string "reviso"
+    t.string "vob"
+    t.string "nombre_director_general"
     t.bigint "previous_study_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -77,6 +81,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_10_221214) do
   end
 
   create_table "equal_objects", force: :cascade do |t|
+    t.string "proyecto"
+    t.string "reviso"
+    t.string "vob"
+    t.string "nombre_director_general"
     t.bigint "previous_study_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -93,6 +101,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_10_221214) do
   end
 
   create_table "personal_inexistences", force: :cascade do |t|
+    t.string "proyecto"
+    t.string "reviso"
+    t.string "vob"
+    t.string "nombre_director_general"
     t.bigint "previous_study_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -108,7 +120,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_10_221214) do
     t.string "lugar"
     t.string "supervisor"
     t.string "ordenador"
-    t.string "nombre_centro"
     t.text "justificacion_necesidad_contratacion"
     t.text "obligaciones"
     t.text "programa"
@@ -119,7 +130,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_10_221214) do
     t.float "valor_mes"
     t.float "valor_total_contrato"
     t.string "domicilio_contractual"
-    t.text "justificacion_valor_contrato"
     t.boolean "contratacion_acuerdo_comercial"
     t.boolean "contratacion_plan_adquisiciones"
     t.string "numero_contratos_escrito"

@@ -52,11 +52,6 @@
   </div>
 
   <div class="my-5">
-    <%= form.label :nombre_centro %>
-    <%= form.text_field :nombre_centro, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-
-  <div class="my-5">
     <%= form.label :"1. justificacion necesidad contratacion" %>
     <%= form.rich_text_area :justificacion_necesidad_contratacion, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
@@ -92,7 +87,7 @@
   </div> 
   <div class="my-5">
     <%= form.label :"numero contratos (Escritos)" %>
-    <%= form.number_field :numero_contratos_escrito, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.text_field :numero_contratos_escrito, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
@@ -108,11 +103,6 @@
   <div class="my-5">
     <%= form.label :"5. domicilio_contractual" %>
     <%= form.text_field :domicilio_contractual, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :"7. justificacion_valor_contrato" %>
-    <%= form.text_area :justificacion_valor_contrato, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">

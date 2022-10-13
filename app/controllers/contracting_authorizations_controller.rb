@@ -73,6 +73,6 @@ class ContractingAuthorizationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def contracting_authorization_params
-      params.require(:contracting_authorization).permit(:cdp, :rubro, :radicado_nis, :previous_study_id)
+      params.require(:contracting_authorization).permit(:cdp, :rubro, :radicado_nis, :previous_study_id, :proyecto, :reviso, :vob, :nombre_director_general)
     end
 end

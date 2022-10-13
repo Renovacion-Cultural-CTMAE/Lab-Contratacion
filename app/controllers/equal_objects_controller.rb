@@ -73,6 +73,6 @@ class EqualObjectsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def equal_object_params
-      params.require(:equal_object).permit(:previous_study_id)
+      params.require(:equal_object).permit(:previous_study_id, :proyecto, :reviso, :vob, :nombre_director_general)
     end
 end

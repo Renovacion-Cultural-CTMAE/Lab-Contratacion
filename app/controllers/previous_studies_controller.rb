@@ -76,6 +76,6 @@ class PreviousStudiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def previous_study_params
-      params.require(:previous_study).permit(:objeto, :educacion, :experiencia, :valor_forma_pago, :plazo, :lugar, :supervisor, :ordenador, :nombre_centro, :justificacion_necesidad_contratacion, :obligaciones, :nivel, :perfil, :numero_contratos, :valor_mes, :valor_total_contrato, :domicilio_contractual, :justificacion_valor_contrato, :contratacion_acuerdo_comercial, :contratacion_plan_adquisiciones, :programa, :experiencia_t, :numero_contratos_escrito, :proyecto, :cargo_proyecto, :reviso, :cargo_reviso)
+      params.require(:previous_study).permit(:objeto, :educacion, :experiencia, :valor_forma_pago, :plazo, :lugar, :supervisor, :ordenador, :justificacion_necesidad_contratacion, :obligaciones, :nivel, :perfil, :numero_contratos, :valor_mes, :valor_total_contrato, :domicilio_contractual, :contratacion_acuerdo_comercial, :contratacion_plan_adquisiciones, :programa, :experiencia_t, :numero_contratos_escrito, :proyecto, :cargo_proyecto, :reviso, :cargo_reviso)
     end
 end

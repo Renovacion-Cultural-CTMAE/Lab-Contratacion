@@ -9,7 +9,6 @@ class CreatePreviousStudies < ActiveRecord::Migration[7.0]
       t.string :lugar
       t.string :supervisor
       t.string :ordenador
-      t.string :nombre_centro
       t.text :justificacion_necesidad_contratacion
       t.text :obligaciones
       t.text :programa
@@ -20,7 +19,6 @@ class CreatePreviousStudies < ActiveRecord::Migration[7.0]
       t.float :valor_mes
       t.float :valor_total_contrato
       t.string :domicilio_contractual
-      t.text :justificacion_valor_contrato
       t.boolean :contratacion_acuerdo_comercial
       t.boolean :contratacion_plan_adquisiciones
       t.string :numero_contratos_escrito
