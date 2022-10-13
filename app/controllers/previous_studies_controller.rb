@@ -12,7 +12,8 @@ class PreviousStudiesController < ApplicationController
       format.html
       format.pdf do
         render pdf: "estudios_previos", template: 'previous_studies/report', formats:[:html], 
-          header: { html: { template: 'previous_studies/header', formats:[:html]}}
+          header: { html: { template: 'previous_studies/header', formats:[:html]}},
+          footer: { html: { template: 'previous_studies/footer', formats:[:html]}}
       end
     end
   end

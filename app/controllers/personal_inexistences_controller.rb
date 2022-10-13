@@ -12,7 +12,8 @@ class PersonalInexistencesController < ApplicationController
       format.html
       format.pdf do
         render pdf: "Certificado inexistencia personal", template: 'personal_inexistences/report', formats:[:html],
-          header: {html: {template: 'personal_inexistences/header', formats:[:html]}}
+          header: {html: {template: 'personal_inexistences/header', formats:[:html]}},
+          footer: {html: {template: 'personal_inexistences/footer', formats:[:html]}}
       end
       end
   end

@@ -12,7 +12,8 @@ class EqualObjectsController < ApplicationController
       format.html
       format.pdf do
         render pdf: "Certificado objetos iguales", template: 'equal_objects/report', formats:[:html],
-          header:{ html: { template: 'equal_objects/header', formats:[:html]}}
+          header:{ html: { template: 'equal_objects/header', formats:[:html]}},
+          footer: { html: { template: 'equal_objects/footer', formats:[:html]}}
       end
       end
   end

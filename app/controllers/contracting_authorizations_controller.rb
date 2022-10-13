@@ -12,7 +12,8 @@ class ContractingAuthorizationsController < ApplicationController
       format.html
       format.pdf do
         render pdf: "Autorizacion_contratacion", template: 'contracting_authorizations/report', formats:[:html],
-          header: { html: { template: 'contracting_authorizations/header', formats:[:html]}}
+          header: { html: { template: 'contracting_authorizations/header', formats:[:html]}},
+          footer: { html: { template: 'contracting_authorizations/footer', formats:[:html]}}
       end
     end
   end
