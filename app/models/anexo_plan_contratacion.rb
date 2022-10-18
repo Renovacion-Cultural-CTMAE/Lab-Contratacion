@@ -1,0 +1,2 @@
+class AnexoPlanContratacion < ApplicationRecord
+end

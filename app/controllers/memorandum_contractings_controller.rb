@@ -8,6 +8,14 @@ class MemorandumContractingsController < ApplicationController
 
   # GET /memorandum_contractings/1 or /memorandum_contractings/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "memorando_contratacion", template: 'memorandum_contractings/report', formats:[:html],
+          header: { html: { template: 'memorandum_contractings/header', formats:[:html] }},
+          footer: { html: { template: 'memorandum_contractings/footer', formats:[:html] }}
+      end
+    end
   end
 
   # GET /memorandum_contractings/new
@@ -65,6 +73,6 @@ class MemorandumContractingsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def memorandum_contracting_params
-      params.require(:memorandum_contracting).permit(:tipo_formacion, :cdp, :previous_studies_id)
+      params.require(:memorandum_contracting).permit(:tipo_formacion, :cdp, :previous_studies_id, :proyecto, :reviso, :vob)
     end
 end

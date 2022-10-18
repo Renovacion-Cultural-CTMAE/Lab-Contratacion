@@ -1,0 +1,1 @@
+json.array! @inclusion_annual_object_of_acquisitions, partial: "inclusion_annual_object_of_acquisitions/inclusion_annual_object_of_acquisition", as: :inclusion_annual_object_of_acquisition

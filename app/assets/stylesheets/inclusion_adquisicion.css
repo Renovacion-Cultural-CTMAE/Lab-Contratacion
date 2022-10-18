@@ -9,13 +9,28 @@ body{
     text-align: center;
 }
 
-h2, h3{
+h3{
     text-align: center;
-    padding-bottom: 10px;
+    padding-top: 20px;
 }
 
-p{
+h4{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#texto{
     text-align: justify;
+}
+
+#texto_pequeño{
+    font-size: small;
+}
+
+#pantallazo{
+    text-align: center;
+    padding-top: 20px;
 }
 #numeracion{
     text-align: right;

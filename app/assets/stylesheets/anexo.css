@@ -1,0 +1,38 @@
+body{
+    padding-top: 0.50cm;
+    padding-bottom: 0.49cm;
+    padding-left: 0.60cm;
+    padding-right: 1cm;
+}
+
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+th{
+    text-align: center, justify;
+}
+
+td{
+    text-align: justify;
+}
+
+#titulos{
+    background-color: rgba(202, 196, 196, 0.575);
+}
+
+#subtitulos{
+    background-color: rgb(162, 209, 166);
+}
+
+h2, h3{
+    text-align: center;
+}
+
+#tabla{
+    font-size: small;
+    margin: 2%;
+    margin-right: 400px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="estilo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="logo_sena">
+        <img src="Logo_Sena.png" alt="...">
+    </div>
+    <table align="center">
+        <tr>
+            <th colspan="2", id="titulo_tabla">MEMORANDO DE CONTRATACIÓN<br>CENTRO DE FORMACIÓN: COMPLEJO TECNOLÓGICO MINERO<br>AGROEMPRESARIAL</th>
+        </tr>
+        <tr>
+            <th>Regional y Centro de Formación que realiza la solicitud:</th>
+            <td>Regional Antioquia. Complejo Tecnológico Minero Agroempresarial</td>
+        </tr>
+        <tr>
+            <th>Descripción breve de la solicitud:</th>
+            <td> <%= @memorandum_contracting.previous_study.objeto %></td>
+        </tr>
+        <tr>
+            <th>Tipo de formación o programa:</th>
+            <td>-<%= @memorandum_contracting.previous_study.tipo %></td>
+        </tr>
+        <tr>
+            <th>Cantidad de contratos:</th>
+            <td><%= @memorandum_contracting.previous_study.numero_contratos_escrito %></td>
+        </tr>
+        <tr>
+            <th>Valor total de la contratación:</th>
+            <td><%= @memorandum_contracting.previous_study.valor_forma_pago %></td>
+        </tr>
+        <tr>
+            <th>CDP:</th>
+            <td><%= @memorandum_contracting.previous_study.cdp %></td>
+        </tr>
+        <tr>
+            <td colspan="2">Se deja constancia que previo a realizar la presente solicitud el Centro de Formación revisó el cumplimiento de los requisitos legales de acuerdo con la normatividad vigente y aplicable, en concordancia con el manual de contratación vigente.</td>
+        </tr>
+    </table>
+    <h3>_________________________________________________<br>FERNANDO CANO GÓMEZ<br>SUBDIRECTOR COMPLEJO TECNOLÓGICO MINERO AGROEMPRESARIAL</h3>
+    <p>Proyectó: <%= @memorandum_contracting.proyecto %> <br>Reviso: <%= @memorandum_contracting.reviso %> <br>VoBo: <%= @memorandum_contracting.vob %></p>
+</body>
+</html>

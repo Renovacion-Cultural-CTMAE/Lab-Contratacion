@@ -1,5 +1,8 @@
 body{
-    margin: 50px;
+    padding-top: 0.50cm;
+    padding-bottom: 0.49cm;
+    padding-left: 0.60cm;
+    padding-right: 1cm;
 }
 
 #logo_sena{
@@ -157,4 +160,7 @@ div, p{
 
 li{
     text-align: justify, right;
+}
+#numeracion{
+    text-align: right;
 }

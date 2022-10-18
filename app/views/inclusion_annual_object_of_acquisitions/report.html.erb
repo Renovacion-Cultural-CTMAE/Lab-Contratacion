@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <%= wicked_pdf_stylesheet_link_tag "inclusion_adquisicion" -%>
+    <%= wicked_pdf_javascript_include_tag "number_pages" %>
+  </head>
+  <body onload='number_pages'>
+    <h3>CERTIFICADO DE INCLUSIÓN DE OBJETO EN EL PLAN ANUAL DE<br>ADQUISICIONES</h3>
+    <h3>EL SUBDIRECTOR DEL COMPLEJO TECNOLÓGICO MINERO AGROEMPRESARIAL<br>DEL SERVICIO NACIONAL DE APRENDIZAJE – REGIONAL ANTIOQUIA</h3>
+    <h4>CERTIFICA</h4>
+    <div id="texto">
+      <p>Que una vez revisado el Plan Anual de Adquisiciones para la vigencia <%= @inclusion_annual_object_of_acquisition.año %>, entregado a la Dirección de Formación Profesional, se verificó que la contratación para los Servicios Personales se encuentra incluido en éste.</p>
+        <p>Para mayor constancia se firma en Puerto Berrio, a los <%= @inclusion_annual_object_of_acquisition.fecha_constancia %></p>
+    </div>
+    <h3>_________________________________________________<br>FERNANDO CANO GÓMEZ<br>SUBDIRECTOR DE CENTRO</h3>
+    <div id="texto_pequeño">
+      <p>Proyectó: <%= @inclusion_annual_object_of_acquisition.proyecto %></p>
+      <p>Revisó: <%= @inclusion_annual_object_of_acquisition.reviso %></p>
+    </div>
+    <div id="pantallazo">
+        <img src="ejemplo_PLAN_ANUAL_DE_ADQUISICIONES.png" alt="...">
+   </body>
+</html>

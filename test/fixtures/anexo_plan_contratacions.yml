@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  periodo: 1
+  elaborado_por: MyString
+  telefono: 1
+  duracion_programa: MyString
+  observaciones: MyString
+
+two:
+  periodo: 1
+  elaborado_por: MyString
+  telefono: 1
+  duracion_programa: MyString
+  observaciones: MyString
