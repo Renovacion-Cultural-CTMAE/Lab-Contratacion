@@ -222,8 +222,8 @@ el futuro contratista cumple con los requisitos señalados anteriormente.<br>
         <h2>Fernando Cano Gómez <br> Subdirector de Centro</h2>
     </div>
     <div id="texto_final">
-        <p>Proyectó: (nombre en calibri 8) Cargo: (nombre del cargo - Dependencia o Grupo)<br>
-            Revisó: (nombre en calibri 8) Cargo: (nombre del cargo - Dependencia o Grupo) 	
+        <p>Proyectó: <%= @previous_study.proyecto %>  <%= @previous_study.cargo_proyecto %><br>
+            Revisó: <%= @previous_study.reviso %> <%= @previous_study.cargo_reviso %> 	
         </p>
     </div>
 </div>
