@@ -1,6 +1,6 @@
 body{
-    padding-top: 0.50cm;
-    padding-bottom: 0.49cm;
+    padding-top: 0cm;
+    padding-bottom: 0cm;
     padding-left: 0.60cm;
     padding-right: 1cm;
 }
@@ -33,6 +33,6 @@ h2, h3{
 
 #tabla{
     font-size: small;
-    margin: 2%;
+    margin: 1%;
     margin-right: 400px;
 }
