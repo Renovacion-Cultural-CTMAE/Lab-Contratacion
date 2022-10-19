@@ -11,7 +11,7 @@ class InclusionObjectAcqusController < ApplicationController
     respond_to do |format|
       format.html
       format.pdf do
-        render pdf "certificado_de_inclusion_de_objeto_en_el_plan_de_adquisiciones", template: 'inclusion_object_acqus/report', formats:[:html],
+        render pdf: "certificado_de_inclusion_de_objeto_en_el_plan_de_adquisiciones", template: 'inclusion_object_acqus/report', formats:[:html],
           header:{ html: { template: 'inclusion_object_acqus/header', formats:[:html] }},
           footer:{ html: { template: 'inclusion_object_acqus/footer', formats:[:html] }}
       end

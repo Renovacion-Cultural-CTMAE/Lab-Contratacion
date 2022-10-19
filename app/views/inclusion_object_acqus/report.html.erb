@@ -11,7 +11,7 @@
     <h4>CERTIFICA</h4>
     <div id="texto">
       <p>Que una vez revisado el Plan Anual de Adquisiciones para la vigencia <%= @inclusion_object_acqu.año %>, entregado a la Dirección de Formación Profesional, se verificó que la contratación para los Servicios Personales se encuentra incluido en éste.</p>
-      <p><%= @inclusion_object_acqu.fecha_constancia %></p>
+      <p>Para mayor constancia se firma en Puerto Berrio, a los <%= @inclusion_object_acqu.fecha_constancia %></p>
     </div>
     <h3>_________________________________________________<br>FERNANDO CANO GÓMEZ<br>SUBDIRECTOR DE CENTRO</h3>
     <div id="texto_pequeño">
@@ -19,7 +19,7 @@
       <p>Revisó: <%= @inclusion_object_acqu.reviso %></p>
     </div>
     <div id="pantallazo">
-      <img src="#{@inclusion_object_acqu.image}" alt="...">
+      <%= image_tag(@inclusion_object_acqu.image)%>
     </div>
   </body>
 </html>

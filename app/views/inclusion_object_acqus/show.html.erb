@@ -10,6 +10,7 @@
     <div class="inline-block ml-2">
       <%= button_to 'Destroy this inclusion_object_acqu', inclusion_object_acqu_path(@inclusion_object_acqu), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
     </div>
+    <%= link_to 'Generar reporte', "/inclusion_object_acqus/#{@inclusion_object_acqu.id}.pdf", class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <%= link_to 'Back to inclusion_object_acqus', inclusion_object_acqus_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
   </div>
 </div>
