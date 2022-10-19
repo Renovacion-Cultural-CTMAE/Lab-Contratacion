@@ -1,1 +1,0 @@
-json.partial! "inclusion_annual_object_of_acquisitions/inclusion_annual_object_of_acquisition", inclusion_annual_object_of_acquisition: @inclusion_annual_object_of_acquisition

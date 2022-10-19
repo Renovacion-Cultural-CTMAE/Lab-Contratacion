@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   resources :anexo_plan_contratacions
-  resources :inclusion_annual_object_of_acquisitions
   resources :contractors
   resources :personal_inexistences
   resources :equal_objects
