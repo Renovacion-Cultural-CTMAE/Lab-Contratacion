@@ -6,4 +6,5 @@ class PreviousStudy < ApplicationRecord
   has_one :contracting_authorization
   has_one :equal_object
   has_one :personal_inexistence
+  has_one :inclusion_object_acqu
 end

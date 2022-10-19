@@ -1,0 +1,31 @@
+<div id="<%= dom_id inclusion_object_acqu %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Año:</strong>
+    <%= inclusion_object_acqu.año %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Fecha constancia:</strong>
+    <%= inclusion_object_acqu.fecha_constancia %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Proyecto:</strong>
+    <%= inclusion_object_acqu.proyecto %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Reviso:</strong>
+    <%= inclusion_object_acqu.reviso %>
+  </p>
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Reviso:</strong>
+    <%= image_tag(inclusion_object_acqu.image) %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this inclusion object acqu", inclusion_object_acqu, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this inclusion object acqu', edit_inclusion_object_acqu_path(inclusion_object_acqu), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :inclusion_object_acqus
   resources :anexo_plan_contratacions
   resources :contractors
   resources :personal_inexistences
