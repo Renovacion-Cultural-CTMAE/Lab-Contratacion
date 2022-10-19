@@ -11,9 +11,10 @@ class AnexoPlanContratacionsController < ApplicationController
     respond_to do |format|
       format.html
       format.pdf do
-        pdf "anexo_plan_contratacion", template: 'anexo_plan_contratacions/report', formats:[:html],
-          header: {html: {template: 'anexo_plan_contratacions/header', formats:[:html]}},
-          footer: {html: {template: 'anexo_plan_contratacions/footer', formats:[:html]}}
+        render pdf: "anexo_plan_contratacion", template: 'anexo_plan_contratacions/report', formats:[:html],
+          footer: {html: {template: 'anexo_plan_contratacions/footer', formats:[:html]}},
+          orientation: 'Landscape',
+          zoom: 0.7
       end
     end
   end
@@ -73,6 +74,6 @@ class AnexoPlanContratacionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def anexo_plan_contratacion_params
-      params.require(:anexo_plan_contratacion).permit(:periodo, :elaborado_por, :telefono, :duracion_programa, :observaciones)
+      params.require(:anexo_plan_contratacion).permit(:periodo, :elaborado_por, :telefono, :duracion_programa, :observaciones, :previous_study_id)
     end
 end
