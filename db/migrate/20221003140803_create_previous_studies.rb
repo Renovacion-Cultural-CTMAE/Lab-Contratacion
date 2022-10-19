@@ -16,11 +16,9 @@ class CreatePreviousStudies < ActiveRecord::Migration[7.0]
       t.text :perfil
       t.text :experiencia_t
       t.integer :numero_contratos
-      t.float :valor_mes
-      t.float :valor_total_contrato
+      t.string :valor_mes
+      t.string :valor_total_contrato
       t.string :domicilio_contractual
-      t.boolean :contratacion_acuerdo_comercial
-      t.boolean :contratacion_plan_adquisiciones
       t.string :numero_contratos_escrito
       t.string :proyecto
       t.string :cargo_proyecto
