@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="estilo.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-    <div id="logo_sena">
-        <img src="Logo_Sena.png" alt="...">
-    </div>
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <%= wicked_pdf_stylesheet_link_tag "memorando_contratista" -%>
+    <%= wicked_pdf_javascript_include_tag "number_pages" %>
+  </head>
+  <body onload='number_pages'>
+
     <table align="center">
         <tr>
             <th colspan="2", id="titulo_tabla">MEMORANDO DE CONTRATACIÓN<br>CENTRO DE FORMACIÓN: COMPLEJO TECNOLÓGICO MINERO<br>AGROEMPRESARIAL</th>
@@ -25,7 +21,7 @@
         </tr>
         <tr>
             <th>Tipo de formación o programa:</th>
-            <td>-<%= @memorandum_contracting.previous_study.tipo %></td>
+            <td><%= @memorandum_contracting.tipo_formacion %></td>
         </tr>
         <tr>
             <th>Cantidad de contratos:</th>
@@ -37,7 +33,7 @@
         </tr>
         <tr>
             <th>CDP:</th>
-            <td><%= @memorandum_contracting.previous_study.cdp %></td>
+            <td><%= @memorandum_contracting.cdp %></td>
         </tr>
         <tr>
             <td colspan="2">Se deja constancia que previo a realizar la presente solicitud el Centro de Formación revisó el cumplimiento de los requisitos legales de acuerdo con la normatividad vigente y aplicable, en concordancia con el manual de contratación vigente.</td>
@@ -45,5 +41,5 @@
     </table>
     <h3>_________________________________________________<br>FERNANDO CANO GÓMEZ<br>SUBDIRECTOR COMPLEJO TECNOLÓGICO MINERO AGROEMPRESARIAL</h3>
     <p>Proyectó: <%= @memorandum_contracting.proyecto %> <br>Reviso: <%= @memorandum_contracting.reviso %> <br>VoBo: <%= @memorandum_contracting.vob %></p>
-</body>
+  </body>
 </html>

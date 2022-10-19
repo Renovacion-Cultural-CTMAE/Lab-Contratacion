@@ -73,6 +73,6 @@ class MemorandumContractingsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def memorandum_contracting_params
-      params.require(:memorandum_contracting).permit(:tipo_formacion, :cdp, :previous_studies_id, :proyecto, :reviso, :vob)
+      params.require(:memorandum_contracting).permit(:tipo_formacion, :cdp, :previous_study_id, :proyecto, :reviso, :vob)
     end
 end

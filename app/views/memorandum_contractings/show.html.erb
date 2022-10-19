@@ -10,6 +10,8 @@
     <div class="inline-block ml-2">
       <%= button_to 'Destroy this memorandum_contracting', memorandum_contracting_path(@memorandum_contracting), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
     </div>
+   <%= link_to 'Generar reporte', "/memorandum_contractings/#{@memorandum_contracting.id}.pdf", class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+
     <%= link_to 'Back to memorandum_contractings', memorandum_contractings_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
   </div>
 </div>
