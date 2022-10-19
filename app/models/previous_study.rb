@@ -7,4 +7,5 @@ class PreviousStudy < ApplicationRecord
   has_one :equal_object
   has_one :personal_inexistence
   has_one :inclusion_object_acqu
+  has_one :anexo_plan_contratacion
 end
