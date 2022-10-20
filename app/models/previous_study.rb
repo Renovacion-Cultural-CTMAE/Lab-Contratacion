@@ -8,4 +8,5 @@ class PreviousStudy < ApplicationRecord
   has_one :personal_inexistence
   has_one :inclusion_object_acqu
   has_one :anexo_plan_contratacion
+  has_one :riesgo
 end

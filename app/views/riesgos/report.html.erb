@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <%= wicked_pdf_stylesheet_link_tag "objetos_iguales" -%>
+    <%= wicked_pdf_javascript_include_tag "number_pages" %>
+  </head>
+  <body onload='number_pages'>
+    <div id="tabla">
+      <table>
+          <tr>
+              <th colspan="24">ANEXO MATRIZ DE RIESGOS<br>CONTRATACIÓN DE SERVICIOS PROFESIONALES Y DE APOYO A LA GESTIÓN</th>
+          </tr>
+          <tr>
+              <th rowspan="3">N°</th>
+              <th rowspan="3", id="vertical">CLASE</th>  
+              <th rowspan="3">FUENTE</th>
+              <th rowspan="3">ETAPA</th>   
+              <th rowspan="3">TIPO</th>  
+              <th rowspan="3", id="vertical">DESCRIPCION (QUE PUEDE PASAR, Y COMO PUEDE OCURRIR)</th>  
+              <th rowspan="3">CONSECUENCIA DE LA OCURRENCIA DEL EVENTO</th>  
+              <th rowspan="3">PROBABILIDAD</th>  
+              <th rowspan="3">IMPACTO</th>  
+              <th rowspan="3">VALORACION DEL RIESGO</th>  
+              <th rowspan="3">CATEGORIA</th>  
+              <th colspan="2">¿A QUIEN SE LE ASIGNA?</th>  
+              <th>TRATAMIENTO/CONTROLES A SER IMPLEMENTADOS</th> 
+              <th colspan="4">IMPACTO DESPUES DEL TRATAMIENTO</th> 
+              <th rowspan="3">¿AFECTA LA EJECUCION DEL CONTRATO?</th> 
+              <th rowspan="3">RESPONSABLE POR IMPLEMENTAR EL TRATAMIENTO</th> 
+              <th rowspan="3">FECHA ESTIMADA EN QUE INICIA EL TRATAMIENTO</th> 
+              <th rowspan="3">FECHA ESTIMADA EN QUE SE COMPLETA EL TRATAMIENTO</th> 
+              <th colspan="2">MONITOREO Y REVISION</th> 
+          </tr>
+          <tr>
+              <th rowspan="2">SENA</th>
+              <th rowspan="2">PROPONENTE/ ADJUDICATARIO</th>
+              <th rowspan="2">CONTROLES PARA IMPLEMENTAR</th>
+              <th rowspan="2">PROBABILIDAD</th>
+              <th rowspan="2">IMPACTO</th>
+              <th rowspan="2">VALORACION DEL RIESGO</th>
+              <th rowspan="2">CATEGORIA</th>
+              <th rowspan="2">¿CÓMO SE REALIZA EL MONITOREO?</th>
+              <th rowspan="2">PERIODICIDAD ¿CUÁNDO?</th>
+          </tr>
+          <tr>
+              <th></th>
+          </tr>
+          <tr>
+              <th>1</th>
+              <th>ESPECÍFICO</th>
+              <th>INTERNO</th>
+              <th>PLANEACIÓN</th>
+              <th>OPERACIONAL</th>
+              <td><%= @riesgo.descripcion_operacional1 %></td>
+              <td>INFORMACIÓN INCOMPLETA DENTRO DEL PROCESO TRASGREDE EL PRINCIPIO DE TRANSPARENCIA</td>
+              <td>RARO</td>
+              <td>MENOR</td>
+              <td>5</td>
+              <td>MEDIO</td>
+              <td>SUBDIRECTOR EN APOYO DEL EQUPO DE CONTRATACIÓN</td>
+              <td></td>
+              <td>CERTIFICACIÓN O VERIFICACIÓN REALIZADA POR LA PERSONA ENCARGADA DEL PLAN DE ADQUISICIONES.</td>
+              <td>RARO</td>
+              <td>MENOR</td>
+              <td>3</td>
+              <td>MEDIO </td>
+              <td>NO</td> 
+              <td>ORDENADOR DEL GASTO</td>
+              <td>ETAPA DE PLANEACIÓN </td>
+              <td>ETAPA DE SELECCIÓN </td>
+              <td>SEGUIMIENTO DE LA PERSONA ENCARGADA DE IMPULSAR EL PROCESO Y SUPERVISOR DEL CONTRATO</td>
+              <td>VERIFICACIÓN EN LA SOLICITUD DE CONTRATACIÓN Y ESTUDIOS PREVIOS</td>
+          </tr>
+          <tr>
+              <th>2</th>
+              <th>GENERAL</th>
+              <th>INTERNO</th>
+              <th>CONTRATACIÓN</th>
+              <th>OPERACIONAL</th>
+              <td><%= @riesgo.descripcion_operacional2 %></td>
+              <td>INCUMPLIMIENTO DEL PRINCIPIO DE PUBLICIDAD            </td>
+              <td>RARO</td>
+              <td>MODERADO</td>
+              <td>4</td>
+              <td>BAJO</td>
+              <td>PERSONAL DE CONTRATACIÓN</td>
+              <td></td>
+              <td>DAR APLICACIÓN A LAS CIRCULARES NO:3-2017-000130 Y NO: 3-2018-000091</td>
+              <td>RARO</td>
+              <td>MENOR</td>
+              <td>3</td>
+              <td>BAJO </td>
+              <td>NO</td> 
+              <td>ORDENADOR DEL GASTO</td>
+              <td>ETAPA DE PLANEACIÓN </td>
+              <td>ETAPA DE SELECCIÓN </td>
+              <td>VERIFICACIÓN EXPEDIENTE CONTRACTUAL, LISTA DE CHEQUE Y/O LÍDER DEL PROCESO</td>
+              <td>SEMANAL</td>
+          </tr>
+          <tr>
+              <th>3</th>
+              <th>GENERAL</th>
+              <th>INTERNA</th>
+              <th>PLANEACION</th>
+              <th>REGULATORIOS</th>
+              <td>EL PROCESO DE CONTRATACION QUE SE ADELANTA NO OBEDECE DIRECTAMENTE A UNA NECESIDAD DE LA ENTIDAD</td>
+              <td>RESPONSABILIDAD DISCIPLINARIA, FISCAL Y PENAL POR VIOLACION A LAS MEDIDAS DE AUSTERIDAD DEL GASTO PÚBLICO (ARTÍCULO 3 DEL DECRETO 1737 DE 1998, MODIFICADO POR EL ARTÍCULO 1 DEL DECRETO 2209 DE 1998.)</td>
+              <td>RARO</td>
+              <td>MAYOR</td>
+              <td>5</td>
+              <td>RIESGO MEDIO</td>
+              <td>SUBDIRECTOR Y  COORDINACIÓN MISIONAL Y ACADÉMICA</td>
+              <td></td>
+              <td>PROGRAMAR INICIALMENTE EL PERSONAL DE PLANTA, PARA DETERMINAR LAS NECESIDADES DE CONTRATACIÓN, TENIENDO EL AUMENTO DE GESTIÓN DEL CENTRO, METAS DE FORMACIÓN Y PRESUPUESTO ASIGNADO.</td>
+              <td>RARO</td>
+              <td>INSIGNIFICANTE</td>
+              <td>2</td>
+              <td>BAJO </td>
+              <td>SI</td> 
+              <td>ORDENADOR DEL GASTO</td>
+              <td>ETAPA DE EJECUCIÓN</td>
+              <td>LIQUIDACIÓN</td>
+              <td>DE MANERA PERMANENTE EN CADA CONTRATACIÓN</td>
+              <td>EN TODO MOMENTO QUE SE VAYA ADELANTAR CONTRATACION DE SERVICIOS PERSONALES</td>
+          </tr>
+      </table>
+    </div>
+  </body>
+</html>

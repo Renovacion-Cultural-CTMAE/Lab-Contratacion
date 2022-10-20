@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_19_134248) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_20_131200) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -165,6 +165,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_19_134248) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "riesgos", force: :cascade do |t|
+    t.string "descripcion_operacional1"
+    t.string "descripcion_operacional2"
+    t.string "descripcion_operacional3"
+    t.bigint "previous_study_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["previous_study_id"], name: "index_riesgos_on_previous_study_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -186,4 +196,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_19_134248) do
   add_foreign_key "inclusion_object_acqus", "previous_studies"
   add_foreign_key "memorandum_contractings", "previous_studies"
   add_foreign_key "personal_inexistences", "previous_studies"
+  add_foreign_key "riesgos", "previous_studies"
 end
