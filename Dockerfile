@@ -21,6 +21,8 @@ ARG RUBY_VERSION=3.0.3
 ARG VARIANT=jemalloc-slim
 FROM quay.io/evl.ms/fullstaq-ruby:${RUBY_VERSION}-${VARIANT} as base
 
+LABEL fly_launch_runtime="rails"
+
 ARG BUNDLER_VERSION=2.3.14
 
 ARG RAILS_ENV=production
@@ -53,6 +55,23 @@ RUN --mount=type=cache,id=dev-apt-cache,sharing=locked,target=/var/cache/apt \
     apt-get install --no-install-recommends -y ${BUILD_PACKAGES} \
     && rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
+
+RUN apt-get update \
+    && apt-get install -y \
+        curl \
+        libxrender1 \
+        libjpeg62-turbo \
+        fontconfig \
+        libxtst6 \
+        xfonts-75dpi \
+        xfonts-base \
+        xz-utils
+
+RUN curl "https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.buster_amd64.deb" -L -o "wkhtmltopdf.deb"
+RUN dpkg -i wkhtmltopdf.deb
+
+ENTRYPOINT ["wkhtmltopdf"]
+
 #######################################################################
 
 # install gems
@@ -71,7 +90,7 @@ RUN bundle install &&  rm -rf vendor/bundle/ruby/*/cache
 
 FROM base
 
-ARG DEPLOY_PACKAGES="postgresql-client file vim curl gzip libsqlite3-0 nodejs npm"
+ARG DEPLOY_PACKAGES="postgresql-client file vim curl gzip libsqlite3-0"
 ENV DEPLOY_PACKAGES=${DEPLOY_PACKAGES}
 
 RUN --mount=type=cache,id=prod-apt-cache,sharing=locked,target=/var/cache/apt \
@@ -79,8 +98,7 @@ RUN --mount=type=cache,id=prod-apt-cache,sharing=locked,target=/var/cache/apt \
     apt-get update -qq && \
     apt-get install --no-install-recommends -y \
     ${DEPLOY_PACKAGES} \
-    && rm -rf /var/lib/apt/lists /var/cache/apt/archives \
-    && npm install -g yarn
+    && rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
 # copy installed gems
 COPY --from=gems /app /app
