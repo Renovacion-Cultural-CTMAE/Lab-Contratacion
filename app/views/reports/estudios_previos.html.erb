@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte</title>
+    <%= wicked_pdf_stylesheet_link_tag "estudio_previo" -%>
+</head>
+<body>
+    <div id="logo_sena">
+    </div>
+    <div id="titulo">
+        <h2>PROCESO GESTIÓN DEL TALENTO HUMANO</h2>
+        <h2>FORMATO ESTUDIO PREVIO</h2>
+    </div>
+    <div id="primer_texto">
+        <p>PARA DETERMINAR LA CONVENIENCIA Y OPORTUNIDAD  PARA CONTRATOS DE PRESTACIÓN DE SERVICIOS PROFESIONALES Y/O DE APOYO A LA GESTIÓN  </p>
+    </div>
+    <div class="tabla_uno">
+        <table align="center">
+            <tr>
+                <th>OBJETO:</th>
+                <td> <%= Contract.objeto %> </th>
+            </tr>
+            <tr>
+                <th>EDUCACIÓN Y/O FORMACIÓN:</th>
+                <td> <%= @previous_study.educacion %> </td>
+            </tr>
+            <tr>
+                <th>EXPERIENCIA RELACIONADA:</th>
+                <td> <%= @previous_study.experiencia %> </td>
+            </tr>
+            <tr>
+                <th>VALOR Y FORMA DE PAGO:</th>
+                <td> <%= @previous_study.valor_forma_pago %> </td>
+            </tr>
+            <tr>
+                <th>PLAZO:</th>
+                <td> <%= @previous_study.plazo %> </td>
+            </tr>
+            <tr>
+                <th>LUGAR DE EJECUCIÓN:</th>
+                <td> <%= @previous_study.lugar %> </td>
+            </tr>
+            <tr>
+                <th>SUPERVISOR:</th>
+                <td> <%= @previous_study.supervisor %> </td>
+            </tr>
+            <tr>
+                <th>ORDENADOR DEL PAGO:</th>
+                <td> <%= @previous_study.ordenador %> </td>
+            </tr>
+        </table>
+    </div>
+    <div id="segundo_texto">
+        <p>De conformidad con lo establecido en los numerales 7 y 12 del artículo 25 de la Ley 80 de 1993 y el artículo 20 del Decreto 1510 de 2013 Decreto compilado por el artículo 2.2.1.1.2.1.1 del Decreto 1082 de 2015, así como lo dispuesto en el literal h) del numeral 4 del artículo 2 de la Ley 1150 de 2007, en concordancia con el artículo 2.2.1.2.1.4.9 del Decreto 1082 de 2015, artículo 2.8.4.4.5 y subsiguientes del Decreto 1068 de 2015 y artículo 3º del Decreto 371 de 2021,el Complejo Tecnológico Minero Agroempresarial del SENA, requiere contratar los servicios personales para atender la necesidad que a continuación se describe:</p>
+    </div>
+    <div id="punto_uno">
+        <h3>1.	Justificación de la necesidad de la contratación: </h3>
+        <div class="container">
+        </div>
+        <p> <%= @previous_study.justificacion_necesidad_contratacion %> </p>
+    </div>
+    <div id="punto_dos">
+        <h3>2. Obligaciones Específicas:</h3>
+        <p> <%= @previous_study.obligaciones %> </p>
+    </div>
+    <div id="punto_tres">
+        <h3>3. Identificación del Contrato a Celebrar:</h3>
+        <p>El contrato a suscribir es de prestación de servicios profesionales y de apoyo a la gestión teniendo en cuenta los artículos 32 – numeral 3 de la Ley 80 de 1993, 2 – literal h) del numeral 4 de la Ley 1150 de 2007 y el artículo 2.2.1.2.1.4.9 del Decreto 1082 de 2015.<br>
+        De conformidad con las normas mencionadas, este contrato en ningún caso genera relación laboral ni prestaciones sociales, no tiene subordinación y se celebrará por el término estrictamente indispensable.</p>
+    </div>
+    <div id="punto_cuatro">
+        <h3>4. Competencias Técnicas y Personales:</h3>
+        <p>La persona natural deberá ejecutar el objeto del contrato a partir de los conocimientos y experiencia relacionada descritos en el presente estudio previo, además de contar con buenas relaciones interpersonales con clientes internos y/o externos, uso eficaz de las tecnologías de la información y de la comunicación, capacidad de trabajo en equipo y liderazgo.</p>
+    </div>
+    <div id="tabla_programas_formacion">
+        <table align="center">
+            <tr>
+                <th colspan="8">PROGRAMAS FORMACIÓN INFORMACIÓN Y COMUNICACIONES</th>
+            </tr>
+            <tr>
+                <th colspan="8">Áreas Técnicas</th>
+            </tr>
+            <tr>
+                <th>Objeto</th>
+                <th>Nivel</th>
+                <th>Programa</th>
+                <th>Perfil</th>
+                <th>Experiencia</th>
+                <th>Contratos</th>
+                <th>Valor mes</th>
+                <th>Valor total contrato</th>
+            </tr>
+            <tr>
+                <td><%= @previous_study.objeto %></td>
+                <td><%= @previous_study.nivel %></td>
+                <td><%= @previous_study.programa %></td>
+                <td><%= @previous_study.perfil %></td>
+                <td><%= @previous_study.experiencia_t %></td>
+                <td><%= @previous_study.numero_contratos%></td>
+                <td><%= @previous_study.valor_mes %></td>
+                <td><%= @previous_study.valor_total_contrato %></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="4">TOTAL</td>
+                <td><%= @previous_study.numero_contratos %></td>
+                <td></td>
+                <td><%= @previous_study.valor_total_contrato%></td>
+            </tr>
+        </table>
+    </div>
+    <div id="punto_cinco">
+        <h3>5. Domicilio Contractual:</h3>
+        <p> <%= @previous_study.lugar %> </p>
+    </div>
+    <div id="punto_seis">
+        <h3>6. Fundamentos jurídicos que soportan la modalidad de selección:</h3>
+        <p>EI objeto que se requiere contratar corresponde a la prestación de servicios personales, que de conformidad con lo establecido por el artículo 32 - numeral 3 de la Ley 80 de 1993 y el literal h) del numeral 4 del artículo 2 de la Ley 1150 de 2007 y el artículo 2.2.1.2.1.4.9 del Decreto 1082 de 2015, se celebrará bajo la modalidad de Contratación Directa.</p>
+    </div>
+    <div id="punto_siete">
+        <h3>7. Justificación valor del contrato:</h3>
+        <p>El valor de los honorarios se determina de acuerdo con los criterios de selección objetiva establecidos conforme a la necesidad, al objeto, las obligaciones descritas en este documento, la formación académica y la experiencia exigida para la idónea ejecución del contrato, en concordancia con el Plan de Acción de la Entidad, el presupuesto asignado a la dependencia, el Plan Anual de Adquisiciones y la tabla de honorarios vigente.  
+        <br>Para poder adelantar por parte del SENA los trámites administrativos de pago, el contratista debe acreditar previamente el cumplimiento de los requisitos de pago, tales como la certificación expedida por el supervisor del contrato en la que acredite el cumplimiento a entera satisfacción del objeto y obligaciones del contrato en el respectivo periodo y la cancelación de los aportes a la seguridad social como salud, pensión y riesgos laborales y demás documentos necesarios para el pago.  
+        <br> En caso de requerirse el desplazamiento del contratista a otras ciudades o municipios diferentes al domicilio contractual para el cumplimiento del objeto contractual, el SENA pagará los gastos que cause el desplazamiento de conformidad con lo establecido en el acto administrativo vigente.<br> <%= @previous_study.valor_forma_pago %> </p>
+    </div>
+    <div id="punto_ocho">
+        <h3>8. Análisis de riesgos y forma de mitigarlos:</h3>
+        <p>Una vez analizada la matriz de riesgos anexa a este estudio previo respecto del cumplimiento del contrato a celebrar, y en aras de salvaguardar el interés patrimonial, la Entidad solicitará al futuro contratista constituir una garantía de cumplimiento del contrato.</p>
+    </div>
+    <div id="punto_nueve">
+        <h3>9. Garantías que debe asumir el contratista:</h3>
+        <p>EI contratista deberá constituir a su costa y a favor del SENA, una garantía de cumplimiento sobre el 10% del valor total del contrato, en los términos señalados en la Sección 3 Subsección 1 del Decreto 1082 de 2015, la cual se mantendrá vigente durante el plazo de ejecución del contrato y cuatro (4) meses más y se ajustará a los límites, existencia y extensión de los siguientes amparos: Cumplimiento del contrato. Este amparo cubre a la entidad estatal de los perjuicios derivados de a) incumplimiento total o parcial del contrato, cuando el incumplimiento es imputable al contratista; b) El incumplimiento tardío o defectuoso del contrato, cuando el incumplimiento es imputable al contratista c) Los daños imputables al contratista por entregas parciales de la obra, cuando el contrato no prevé entregas parciales; y d) El pago del valor de las multas y de la cláusula penal pecuniaria.</p>
+    </div>
+    <div id="punto_diez">
+        <h3>10. Supervisión:</h3>
+        <p>La supervisión del contrato estará a cargo de: la Coordinación académica o quien designe el Subdirector de Centro</p>
+        <p>En caso de ausencia parcial o total del supervisor, la misma será asumida por quien ocupe el cargo, sin necesidad de documento adicional alguno. Si no se da la situación anterior, subdirector de Centro designará nuevo, para lo cual no se requerirá de modificación contractual y la nueva designación se comunicará a las partes mediante el SECOP II.</p>
+    </div>
+    <div id="punto_once">
+        <h3>11. Proceso de contratación cobijado por un acuerdo comercial: SI _____   NO  _X___ </h3>
+    </div>
+    <div id="punto_doce">
+        <h3>12. Proceso de contratación incluido en el plan de adquisiciones: SI_____  NO______</h3>
+    </div>
+    <div id="punto_trece">
+        <h3>13. Criterios para seleccionar la oferta más favorable:</h3>
+        <p>De conformidad con el artículo 2.2.1.2.1.4.9 del Decreto 1082 de 2015, “por tratarse de contratos de prestación de servicios profesionales y de apoyo a la gestión, o para la ejecución de trabajos artísticos que solo pueden encomendarse a determinadas personas naturales, no es necesario que la entidad estatal haya obtenido varias ofertas”.</p>
+    </div>
+    <div id="punto_catorce">
+        <h3>14. Análisis del Sector:</h3>
+        <p>De acuerdo con el artículo 2.2.1.1.1.6.1. del Decreto 1082 de 2015 y la Guía para la Elaboración de Estudios de Sector G-EES-02 de Colombia Compra Eficiente, el análisis del sector en un contrato de prestación de servicios profesionales o de apoyo a la gestión, depende del objeto y de las condiciones de idoneidad y experiencia que llevan a contratar a la persona natural, conforme a lo indicado en la primera parte del presente documento.</p>
+    </div>
+    <div id="punto_catorce_uno">
+        <h3>14.1 Idoneidad y experiencia.</h3>
+        <p>Se anexa certificado de idoneidad.</p>
+    </div>
+    <div id="punto_catorce_dos">
+        <h3>14.2  Estudio de la Oferta.</h3>
+        <p>La Corte Constitucional, en Sentencia C-614 del 2009, señaló que el ejercicio de funciones permanentes en la Administración Pública debe hacerse con personal de planta y que todo vínculo contractual para el desempeño de funciones permanentes y propias del objeto de la entidad contratante debe ser retirado de la dinámica laboral administrativa, debido a que desdibuja el concepto de contrato estatal, vulnera derechos laborales y el artículo 125 de la Constitución Política que exige el mérito para el ingreso y permanencia al empleo público.<br>
+El uso de la modalidad del contrato de prestación de servicios resulta adecuado si se celebra en total observancia a la normativa que la regula, en el marco de la jurisprudencia de las Altas Cortes, pero también es cierto que, a pesar de las múltiples medidas adoptadas en materia de gestión y normativas, persiste el uso de esta modalidad para cumplir funciones de carácter permanente.<br>
+Es por ello que en el mercado colombiano existen múltiples profesionales y expertos en diferentes materias que prestan sus servicios a diversas entidades y cuyo objeto y obligaciones son similares a las que aquí se pretende contratar.<br>
+Sin embargo, una vez analizada la hoja de vida del futuro contratista, frente al objeto contractual,
+las obligaciones y la necesidad que se pretende satisfacer, el Subdirector de centro, establece que
+el futuro contratista cumple con los requisitos señalados anteriormente.<br>
+        </p>
+    </div>
+    <div id="punto_catorce_tres">
+        <h3>14.3  Estudio de la Demanda.</h3>
+        <p>De conformidad con la información suministrada por el Departamento Administrativo de la Función Pública y la Agencia Nacional de Contratación Pública Colombia Compra Eficiente, a 31 de octubre de 2020, las entidades públicas contaban con 392.468 contratistas prestadores de servicios profesionales, de los cuales cerca del 30% estaban vinculados con entidades del orden nacional y 70% con entidades del orden territorial.<br>
+            Para el presente contrato se tuvo como referente los siguientes contratos históricos de la Entidad, en los que se desarrollaron objetos y honorarios similares:</p>
+    </div>
+    <div id="estudio_demanda">
+        <table align="center">
+            <tr>
+                <th>No. y año</th>
+                <th>Contratista</th>
+                <th>No. y año</th>
+                <th>Objeto del contrato</th>
+                <th>Plazo</th>
+                <th>Valor contrato y forma de pago</th>
+                <th>Modalidad de selección</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+   <!-- <div id="punto_quince">
+        <h3>15. Recomendación al Ordenador del Gasto:</h3>
+        <p>Que revisada y validada la documentación presentada por el futuro contratista en el SIGEP y verificado el cumplimiento de los requisitos de capacidad, idoneidad y/o experiencia requerida para la prestación del servicio y el cubrimiento de la necesidad reportada, se recomienda la contratación al ordenador (a) del gasto, sin que sea necesario haber obtenido previamente varias ofertas, así mismo se verificó el cumplimiento de los topes, alternativas o exoneraciones establecidas en la tabla de honorarios vigente. (Nota: este punto solo aplica para contratos cuyas actividades sean diferentes a instructor)</p>
+        <p>Se expide en la ciudad de __________.</p>
+        </div> -->
+    <div id="pie_pagina">
+        <h2>Fernando Cano Gómez <br> Subdirector de Centro</h2>
+    </div>
+    <div id="texto_final">
+        <p>Proyectó: <%= @previous_study.proyecto %>  <%= @previous_study.cargo_proyecto %><br>
+            Revisó: <%= @previous_study.reviso %> <%= @previous_study.cargo_reviso %> 	
+        </p>
+    </div>
+</div>
+</body>
+</html>

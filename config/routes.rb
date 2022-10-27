@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'reports/index'
+  get 'reports/estudios_previos'
   resources :personal_inexistences
   resources :equal_objects
   resources :contracting_authorizations
