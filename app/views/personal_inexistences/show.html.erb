@@ -8,7 +8,6 @@
 
     <%= link_to 'Editar este formato de inexistencia de personal suficiente', edit_personal_inexistence_path(@personal_inexistence), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <div class="inline-block ml-2">
-    <!--<%= #button_to 'Destroy this personal_inexistence', personal_inexistence_path(@personal_inexistence), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>-->
     </div>
     <%= link_to 'Generar reporte', "/personal_inexistences/#{@personal_inexistence.id}.pdf", class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <%= link_to 'Regresar', personal_inexistences_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
