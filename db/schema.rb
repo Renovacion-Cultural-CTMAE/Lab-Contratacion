@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_10_140826) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_10_164902) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -194,6 +194,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_10_140826) do
     t.index ["contractor_id"], name: "index_emails_on_contractor_id"
   end
 
+  create_table "equal_objects", force: :cascade do |t|
+    t.bigint "previous_study_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["previous_study_id"], name: "index_equal_objects_on_previous_study_id"
+  end
+
   create_table "healths", force: :cascade do |t|
     t.integer "codigo_nit_eps"
     t.string "nombre_eps"
@@ -239,6 +246,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_10_140826) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["contractor_id"], name: "index_pensions_on_contractor_id"
+  end
+
+  create_table "personal_inexistences", force: :cascade do |t|
+    t.bigint "previous_study_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["previous_study_id"], name: "index_personal_inexistences_on_previous_study_id"
   end
 
   create_table "phones", force: :cascade do |t|
@@ -316,5 +330,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_10_140826) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "contracting_authorizations", "previous_studies"
+  add_foreign_key "equal_objects", "previous_studies"
   add_foreign_key "memorandum_contractings", "previous_studies"
+  add_foreign_key "personal_inexistences", "previous_studies"
 end
