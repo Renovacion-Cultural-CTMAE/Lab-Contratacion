@@ -1,12 +1,12 @@
 <div id="<%= dom_id equal_object %>">
   <p class="my-5">
-    <strong class="block font-medium mb-1">Previous study:</strong>
+    <strong class="block font-medium mb-1">Codigo de estudios previos:</strong>
     <%= equal_object.previous_study_id %>
   </p>
 
   <% if action_name != "show" %>
-    <%= link_to "Show this equal object", equal_object, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to 'Edit this equal object', edit_equal_object_path(equal_object), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "Mostrar este formato de objetos iguales", equal_object, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Editar este formato de objetos iguales', edit_equal_object_path(equal_object), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
     <hr class="mt-6">
   <% end %>
 </div>

@@ -1,12 +1,12 @@
 <div id="<%= dom_id personal_inexistence %>">
   <p class="my-5">
-    <strong class="block font-medium mb-1">Previous study:</strong>
+    <strong class="block font-medium mb-1">Codigo de estudios previos:</strong>
     <%= personal_inexistence.previous_study_id %>
   </p>
 
   <% if action_name != "show" %>
-    <%= link_to "Show this personal inexistence", personal_inexistence, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to 'Edit this personal inexistence', edit_personal_inexistence_path(personal_inexistence), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "Mostrar este formato de inexistencia de personal", personal_inexistence, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Editar este formato de inexistencia de personal', edit_personal_inexistence_path(personal_inexistence), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
     <hr class="mt-6">
   <% end %>
 </div>
