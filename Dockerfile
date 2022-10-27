@@ -55,26 +55,6 @@ RUN --mount=type=cache,id=dev-apt-cache,sharing=locked,target=/var/cache/apt \
     apt-get install --no-install-recommends -y ${BUILD_PACKAGES} \
     && rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
-
-RUN apt-get update \
-    && apt-get install -y \
-        curl \
-        libxrender1 \
-        libjpeg62-turbo \
-        fontconfig \
-        libxtst6 \
-        xfonts-75dpi \
-        xfonts-base \
-        xz-utils \
-        wget
-RUN wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.buster_amd64.deb
-RUN apt install ./wkhtmltox_0.12.6-1.buster_amd64.deb
-
-RUN curl "https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.buster_amd64.deb" -L -o "wkhtmltopdf.deb"
-RUN dpkg -i wkhtmltopdf.deb
-
-ENTRYPOINT ["wkhtmltopdf"]
-
 #######################################################################
 
 # install gems
@@ -102,6 +82,20 @@ RUN --mount=type=cache,id=prod-apt-cache,sharing=locked,target=/var/cache/apt \
     apt-get install --no-install-recommends -y \
     ${DEPLOY_PACKAGES} \
     && rm -rf /var/lib/apt/lists /var/cache/apt/archives
+
+RUN apt-get update \
+    && apt-get install -y \
+        curl \
+        libxrender1 \
+        libjpeg62-turbo \
+        fontconfig \
+        libxtst6 \
+        xfonts-75dpi \
+        xfonts-base \
+        xz-utils \
+        wget
+RUN wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.buster_amd64.deb
+RUN apt install ./wkhtmltox_0.12.6-1.buster_amd64.deb
 
 # copy installed gems
 COPY --from=gems /app /app
